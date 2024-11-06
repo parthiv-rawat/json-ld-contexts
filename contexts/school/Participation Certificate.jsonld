@@ -8,31 +8,142 @@
         "id": "@id",
         "type": "@type",
         "credentialName": "schema:name",
-        "issuer": {
-            "@id": "schema:issuer",
-            "@type": "@id"
-        },
-        "validFrom": {
-            "@id": "schema:validFrom",
-            "@type": "xsd:date"
-        },
-        "validUntil": {
-            "@id": "schema:validUntil",
-            "@type": "xsd:date"
-        },
-        "credentialSchema": {
-            "@id": "schema:credentialSchema",
-            "@type": "@id",
+        "certificateTitle": "ex:certificateTitle",
+        "schoolOrOrganizationInformation": {
+            "@id": "schema:provider",
+            "@type": "schema:Organization",
             "@context": {
-                "id": "@id",
-                "type": "@type"
+                "organizationName": "schema:name",
+                "organizationLogoOrEmblem": {
+                    "@id": "schema:logo",
+                    "@type": "@id"
+                },
+                "organizationAddress": "schema:address",
+                "contactDetails": {
+                    "@id": "schema:contactPoint",
+                    "@type": "schema:ContactPoint",
+                    "@context": {
+                        "phoneNumber": "schema:telephone",
+                        "email": "schema:email",
+                        "websiteURL": {
+                            "@id": "schema:url",
+                            "@type": "@id"
+                        }
+                    }
+                },
+                "affiliationDetails": "ex:affiliationDetails",
+                "boardOfEducation": "ex:boardOfEducation",
+                "accreditationInformation": "ex:accreditationInformation"
+            }
+        },
+        "participantInformation": {
+            "@id": "schema:about",
+            "@type": "schema:Person",
+            "@context": {
+                "fullName": "schema:name",
+                "classOrGrade": "ex:classOrGrade",
+                "section": "ex:section",
+                "rollNumberOrStudentID": "schema:identifier",
+                "dateOfBirth": {
+                    "@id": "schema:birthDate",
+                    "@type": "xsd:date"
+                },
+                "studentPhotograph": {
+                    "@id": "schema:image",
+                    "@type": "@id"
+                }
+            }
+        },
+        "eventOrActivityDetails": {
+            "@id": "ex:eventOrActivityDetails",
+            "@type": "ex:EventOrActivityDetails",
+            "@context": {
+                "eventName": "schema:event",
+                "eventDate": {
+                    "@id": "schema:startDate",
+                    "@type": "xsd:date"
+                },
+                "venue": "schema:location",
+                "eventDescription": "schema:description",
+                "levelOfParticipation": "ex:levelOfParticipation",
+                "roleOrPosition": "ex:roleOrPosition"
+            }
+        },
+        "certificationStatement": "ex:certificationStatement",
+        "purposeOfCertificate": "ex:purposeOfCertificate",
+        "specialAchievementsOrContributions": "ex:specialAchievementsOrContributions",
+        "dateAndPlace": {
+            "@id": "ex:dateAndPlace",
+            "@type": "ex:DateAndPlace",
+            "@context": {
+                "dateOfIssue": {
+                    "@id": "schema:dateIssued",
+                    "@type": "xsd:date"
+                },
+                "placeOfIssue": "ex:placeOfIssue"
+            }
+        },
+        "signatoryDetails": {
+            "@id": "schema:signatory",
+            "@type": "schema:Person",
+            "@context": {
+                "signatoryName": "schema:name",
+                "signatoryDesignation": "schema:jobTitle",
+                "signatorySignature": {
+                    "@id": "schema:signature",
+                    "@type": "@id"
+                },
+                "additionalSignatories": {
+                    "@id": "ex:additionalSignatories",
+                    "@container": "@set",
+                    "@type": "schema:Person",
+                    "@context": {
+                        "name": "schema:name",
+                        "designation": "schema:jobTitle",
+                        "signature": {
+                            "@id": "schema:signature",
+                            "@type": "@id"
+                        }
+                    }
+                },
+                "officialSealOrStamp": {
+                    "@id": "schema:image",
+                    "@type": "@id"
+                }
+            }
+        },
+        "verificationDetails": {
+            "@id": "ex:verificationDetails",
+            "@type": "ex:VerificationDetails",
+            "@context": {
+                "certificateNumberOrID": "schema:serialNumber",
+                "qrCodeOrBarcode": {
+                    "@id": "ex:qrCodeOrBarcode",
+                    "@type": "@id"
+                },
+                "verificationURL": {
+                    "@id": "schema:url",
+                    "@type": "@id"
+                }
+            }
+        },
+        "additionalElements": {
+            "@id": "ex:additionalElements",
+            "@type": "ex:AdditionalElements",
+            "@context": {
+                "schoolMottoOrTagline": "ex:schoolMottoOrTagline",
+                "inspirationalQuotesOrMessages": "ex:inspirationalQuotesOrMessages",
+                "logosOfSponsorsOrPartners": {
+                    "@id": "ex:logosOfSponsorsOrPartners",
+                    "@container": "@set",
+                    "@type": "@id"
+                },
+                "backgroundGraphicsOrWatermarks": "ex:backgroundGraphicsOrWatermarks"
             }
         },
         "credentialSubject": {
             "@id": "schema:credentialSubject",
             "@context": {
-                "@version": 1.1,
-                "@protected": true,
                 "id": "@id",
                 "certificateTitle": "ex:certificateTitle",
                 "schoolOrOrganizationInformation": {
@@ -171,18 +282,11 @@
         },
         "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
         "SelfSignedCredential": {
-            "@context": {
-                "@version": 1.1,
-                "id": "@id",
-                "type": "@type"
-            },
+            "@type": "@id",
             "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
         },
         "JsonSchemaValidator2018": {
-            "@context": {
-                "@version": 1.1,
-                "type": "@type"
-            },
+            "@type": "@id",
             "@id": "https://w3id.org/security#JsonSchemaValidator2018"
         }
     }

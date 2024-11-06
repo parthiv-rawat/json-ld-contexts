@@ -8,31 +8,86 @@
         "id": "@id",
         "type": "@type",
         "credentialName": "schema:name",
-        "issuer": {
-            "@id": "schema:issuer",
-            "@type": "@id"
-        },
-        "validFrom": {
-            "@id": "schema:validFrom",
-            "@type": "xsd:date"
-        },
-        "validUntil": {
-            "@id": "schema:validUntil",
-            "@type": "xsd:date"
-        },
-        "credentialSchema": {
-            "@id": "schema:credentialSchema",
-            "@type": "@id",
+        "institutionDetails": {
+            "@id": "schema:provider",
+            "@type": "schema:Organization",
             "@context": {
-                "id": "@id",
-                "type": "@type"
+                "institutionName": "schema:name",
+                "officialAddress": "schema:address",
+                "contactInformation": {
+                    "@id": "schema:contactPoint",
+                    "@type": "schema:ContactPoint",
+                    "@context": {
+                        "phoneNumber": "schema:telephone",
+                        "email": "schema:email"
+                    }
+                },
+                "officialLogoOrSeal": {
+                    "@id": "schema:logo",
+                    "@type": "@id"
+                }
+            }
+        },
+        "studentDetails": {
+            "@id": "schema:about",
+            "@type": "schema:Person",
+            "@context": {
+                "studentName": "schema:name",
+                "studentIDOrRollNumber": "schema:identifier",
+                "departmentOrFaculty": "schema:department",
+                "courseOrProgramEnrolled": "schema:educationalProgram"
+            }
+        },
+        "attendancePeriod": {
+            "@id": "ex:attendancePeriod",
+            "@type": "ex:AttendancePeriod",
+            "@context": {
+                "startDate": {
+                    "@id": "schema:startDate",
+                    "@type": "xsd:date"
+                },
+                "endDate": {
+                    "@id": "schema:endDate",
+                    "@type": "xsd:date"
+                },
+                "termOrSemester": "ex:termOrSemester"
+            }
+        },
+        "attendanceDetails": {
+            "@id": "ex:attendanceDetails",
+            "@type": "ex:AttendanceDetails",
+            "@context": {
+                "totalDaysAttended": {
+                    "@id": "ex:totalDaysAttended",
+                    "@type": "xsd:integer"
+                },
+                "attendancePercentage": {
+                    "@id": "ex:attendancePercentage",
+                    "@type": "xsd:decimal"
+                },
+                "specificSessionsAttended": "ex:specificSessionsAttended",
+                "attendanceRemarks": "ex:attendanceRemarks"
+            }
+        },
+        "authorizedSignatory": {
+            "@id": "schema:signatory",
+            "@type": "schema:Person",
+            "@context": {
+                "signatoryName": "schema:name",
+                "designation": "schema:jobTitle",
+                "signature": {
+                    "@id": "schema:signature",
+                    "@type": "@id"
+                },
+                "institutionSealOrStamp": {
+                    "@id": "schema:image",
+                    "@type": "@id"
+                }
             }
         },
         "credentialSubject": {
             "@id": "schema:credentialSubject",
             "@context": {
-                "@version": 1.1,
-                "@protected": true,
                 "id": "@id",
                 "institutionDetails": {
                     "@id": "schema:provider",
@@ -115,18 +170,11 @@
         },
         "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
         "SelfSignedCredential": {
-            "@context": {
-                "@version": 1.1,
-                "id": "@id",
-                "type": "@type"
-            },
+            "@type": "@id",
             "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
         },
         "JsonSchemaValidator2018": {
-            "@context": {
-                "@version": 1.1,
-                "type": "@type"
-            },
+            "@type": "@id",
             "@id": "https://w3id.org/security#JsonSchemaValidator2018"
         }
     }
