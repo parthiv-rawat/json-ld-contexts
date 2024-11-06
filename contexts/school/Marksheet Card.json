@@ -1,0 +1,315 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@protected": true,
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "ex": "https://example.org/terms#",
+        "id": "@id",
+        "type": "@type",
+        "credentialName": "schema:name",
+        "issuer": {
+            "@id": "schema:issuer",
+            "@type": "@id"
+        },
+        "validFrom": {
+            "@id": "schema:validFrom",
+            "@type": "xsd:date"
+        },
+        "validUntil": {
+            "@id": "schema:validUntil",
+            "@type": "xsd:date"
+        },
+        "credentialSchema": {
+            "@id": "schema:credentialSchema",
+            "@type": "@id",
+            "@context": {
+                "id": "@id",
+                "type": "@type"
+            }
+        },
+        "credentialSubject": {
+            "@id": "schema:credentialSubject",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "studentInformation": {
+                    "@id": "schema:about",
+                    "@type": "schema:Person",
+                    "@context": {
+                        "fullName": "schema:name",
+                        "admissionNumberOrRollNumberOrStudentID": "schema:identifier",
+                        "dateOfBirth": {
+                            "@id": "schema:birthDate",
+                            "@type": "xsd:date"
+                        },
+                        "gender": "schema:gender",
+                        "classOrGrade": "ex:classOrGrade",
+                        "section": "ex:section",
+                        "academicYearOrSession": "ex:academicYearOrSession",
+                        "studentPhoto": {
+                            "@id": "schema:image",
+                            "@type": "@id"
+                        },
+                        "mothersName": "ex:mothersName",
+                        "fathersOrGuardiansName": "ex:fathersOrGuardiansName"
+                    }
+                },
+                "schoolInformation": {
+                    "@id": "schema:provider",
+                    "@type": "schema:EducationalOrganization",
+                    "@context": {
+                        "schoolName": "schema:name",
+                        "schoolLogoOrEmblem": {
+                            "@id": "schema:logo",
+                            "@type": "@id"
+                        },
+                        "schoolAddress": "schema:address",
+                        "schoolContactDetails": {
+                            "@id": "schema:contactPoint",
+                            "@type": "schema:ContactPoint",
+                            "@context": {
+                                "phoneNumber": "schema:telephone",
+                                "email": "schema:email",
+                                "website": {
+                                    "@id": "schema:url",
+                                    "@type": "@id"
+                                }
+                            }
+                        },
+                        "affiliationNumber": "ex:affiliationNumber",
+                        "boardOfEducation": "ex:boardOfEducation",
+                        "principalsName": "ex:principalsName"
+                    }
+                },
+                "examinationDetails": {
+                    "@id": "ex:examinationDetails",
+                    "@type": "ex:ExaminationDetails",
+                    "@context": {
+                        "examinationName": "ex:examinationName",
+                        "termOrSemester": "ex:termOrSemester",
+                        "examinationDates": {
+                            "@id": "ex:examinationDates",
+                            "@type": "ex:ExaminationDates",
+                            "@context": {
+                                "start": {
+                                    "@id": "schema:startDate",
+                                    "@type": "xsd:date"
+                                },
+                                "end": {
+                                    "@id": "schema:endDate",
+                                    "@type": "xsd:date"
+                                }
+                            }
+                        },
+                        "dateOfIssue": {
+                            "@id": "schema:dateIssued",
+                            "@type": "xsd:date"
+                        }
+                    }
+                },
+                "subjectWisePerformance": {
+                    "@id": "ex:subjectWisePerformance",
+                    "@type": "ex:SubjectWisePerformance",
+                    "@container": "@set",
+                    "@context": {
+                        "subjectCode": "ex:subjectCode",
+                        "subjectName": "ex:subjectName",
+                        "maximumMarks": {
+                            "@id": "ex:maximumMarks",
+                            "@type": "xsd:decimal"
+                        },
+                        "marksObtained": {
+                            "@id": "ex:marksObtained",
+                            "@type": "xsd:decimal"
+                        },
+                        "grade": "ex:grade",
+                        "gradePoint": {
+                            "@id": "ex:gradePoint",
+                            "@type": "xsd:decimal"
+                        },
+                        "credits": {
+                            "@id": "ex:credits",
+                            "@type": "xsd:decimal"
+                        },
+                        "remarks": "schema:comment"
+                    }
+                },
+                "aggregatePerformance": {
+                    "@id": "ex:aggregatePerformance",
+                    "@type": "ex:AggregatePerformance",
+                    "@context": {
+                        "totalMaximumMarks": {
+                            "@id": "ex:totalMaximumMarks",
+                            "@type": "xsd:decimal"
+                        },
+                        "totalMarksObtained": {
+                            "@id": "ex:totalMarksObtained",
+                            "@type": "xsd:decimal"
+                        },
+                        "percentageScore": {
+                            "@id": "ex:percentageScore",
+                            "@type": "xsd:decimal"
+                        },
+                        "overallGrade": "ex:overallGrade",
+                        "gpaOrCgpa": {
+                            "@id": "ex:gpaOrCgpa",
+                            "@type": "xsd:decimal"
+                        },
+                        "classRankOrPosition": "ex:classRankOrPosition"
+                    }
+                },
+                "attendanceRecord": {
+                    "@id": "ex:attendanceRecord",
+                    "@type": "ex:AttendanceRecord",
+                    "@context": {
+                        "totalWorkingDays": {
+                            "@id": "ex:totalWorkingDays",
+                            "@type": "xsd:integer"
+                        },
+                        "daysPresent": {
+                            "@id": "ex:daysPresent",
+                            "@type": "xsd:integer"
+                        },
+                        "daysAbsent": {
+                            "@id": "ex:daysAbsent",
+                            "@type": "xsd:integer"
+                        },
+                        "attendancePercentage": {
+                            "@id": "ex:attendancePercentage",
+                            "@type": "xsd:decimal"
+                        }
+                    }
+                },
+                "coCurricularAndExtraCurricularActivities": {
+                    "@id": "ex:coCurricularAndExtraCurricularActivities",
+                    "@type": "ex:Activities",
+                    "@context": {
+                        "activitiesParticipatedIn": "ex:activitiesParticipatedIn",
+                        "achievementsAndAwards": "ex:achievementsAndAwards",
+                        "gradesOrRemarksInActivities": "ex:gradesOrRemarksInActivities"
+                    }
+                },
+                "behaviorAndConduct": {
+                    "@id": "ex:behaviorAndConduct",
+                    "@type": "ex:BehaviorAndConduct",
+                    "@context": {
+                        "teachersRemarksOnConduct": "ex:teachersRemarksOnConduct",
+                        "disciplineRecord": "ex:disciplineRecord",
+                        "socialSkillsAndValuesEvaluation": "ex:socialSkillsAndValuesEvaluation"
+                    }
+                },
+                "healthAndPhysicalEducation": {
+                    "@id": "ex:healthAndPhysicalEducation",
+                    "@type": "ex:HealthAndPhysicalEducation",
+                    "@context": {
+                        "physicalFitnessGrades": "ex:physicalFitnessGrades",
+                        "healthStatus": "ex:healthStatus",
+                        "participationInSports": "ex:participationInSports"
+                    }
+                },
+                "promotionStatus": {
+                    "@id": "ex:promotionStatus",
+                    "@type": "ex:PromotionStatus",
+                    "@context": {
+                        "resultStatus": "ex:resultStatus",
+                        "promotionToNextClass": "ex:promotionToNextClass",
+                        "retentionDetails": "ex:retentionDetails",
+                        "recommendationsForImprovement": "ex:recommendationsForImprovement"
+                    }
+                },
+                "certificationAndAuthentication": {
+                    "@id": "ex:certificationAndAuthentication",
+                    "@type": "ex:CertificationAndAuthentication",
+                    "@context": {
+                        "classTeachersName": "ex:classTeachersName",
+                        "classTeachersSignature": {
+                            "@id": "ex:classTeachersSignature",
+                            "@type": "@id"
+                        },
+                        "headOfDepartmentsSignature": {
+                            "@id": "ex:headOfDepartmentsSignature",
+                            "@type": "@id"
+                        },
+                        "principalsName": "ex:principalsName",
+                        "principalsSignature": {
+                            "@id": "schema:signature",
+                            "@type": "@id"
+                        },
+                        "dateOfAuthentication": {
+                            "@id": "ex:dateOfAuthentication",
+                            "@type": "xsd:date"
+                        },
+                        "schoolSealOrStamp": {
+                            "@id": "schema:image",
+                            "@type": "@id"
+                        },
+                        "verificationQRCodeOrBarcode": {
+                            "@id": "ex:verificationQRCodeOrBarcode",
+                            "@type": "@id"
+                        }
+                    }
+                },
+                "gradingScaleOrLegend": {
+                    "@id": "ex:gradingScaleOrLegend",
+                    "@type": "ex:GradingScaleOrLegend",
+                    "@context": {
+                        "gradingScale": {
+                            "@id": "ex:gradingScale",
+                            "@container": "@set",
+                            "@context": {
+                                "grade": "ex:grade",
+                                "marksRange": "ex:marksRange",
+                                "gradePoint": {
+                                    "@id": "ex:gradePoint",
+                                    "@type": "xsd:decimal"
+                                }
+                            }
+                        },
+                        "passMarksCriteria": "ex:passMarksCriteria",
+                        "symbolsAndAbbreviationsUsed": "ex:symbolsAndAbbreviationsUsed"
+                    }
+                },
+                "additionalRemarks": {
+                    "@id": "ex:additionalRemarks",
+                    "@type": "ex:AdditionalRemarks",
+                    "@context": {
+                        "specialNotes": "ex:specialNotes",
+                        "parentsOrGuardiansComments": "ex:parentsOrGuardiansComments",
+                        "studentsSignature": {
+                            "@id": "ex:studentsSignature",
+                            "@type": "@id"
+                        }
+                    }
+                },
+                "instructionsAndPolicies": {
+                    "@id": "ex:instructionsAndPolicies",
+                    "@type": "ex:InstructionsAndPolicies",
+                    "@context": {
+                        "instructionsForStudentsAndParents": "ex:instructionsForStudentsAndParents",
+                        "reEvaluationOrRecheckingProcedures": "ex:reEvaluationOrRecheckingProcedures",
+                        "academicPoliciesAndGuidelines": "ex:academicPoliciesAndGuidelines",
+                        "importantDates": "ex:importantDates"
+                    }
+                }
+            }
+        },
+        "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
+        "SelfSignedCredential": {
+            "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type"
+            },
+            "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
+        },
+        "JsonSchemaValidator2018": {
+            "@context": {
+                "@version": 1.1,
+                "type": "@type"
+            },
+            "@id": "https://w3id.org/security#JsonSchemaValidator2018"
+        }
+    }
+}
