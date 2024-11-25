@@ -3,64 +3,52 @@
       "@version": 1.1,
       "credentialName": {
         "@id": "https://schema.org/name",
-        "@type": "http://www.w3.org/2001/XMLSchema#string",
-        "description": "The official name of the credential or certificate."
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
       "id": {
         "@id": "@id",
-        "@type": "http://www.w3.org/2001/XMLSchema#string",
-        "description": "A unique identifier for the certificate."
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
       },
       "dateOfCreation": {
         "@id": "https://schema.org/dateCreated",
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "description": "The date when the certificate was issued."
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
       },
       "issuer": {
         "@id": "https://schema.org/issuer",
-        "@type": "https://schema.org/Organization",
-        "description": "The organization or individual issuing the certificate."
+        "@type": "https://schema.org/Organization"
       },
       "validFrom": {
         "@id": "https://schema.org/validFrom",
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "description": "The starting date from which the certificate is considered valid."
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
       },
       "credentialSubject": {
         "@id": "https://schema.org/Person",
         "@context": {
           "fatherName": {
             "@id": "http://example.com/fatherName",
-            "@type": "http://www.w3.org/2001/XMLSchema#string",
-            "description": "The full name of the father of the certificate holder."
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
           },
           "motherName": {
             "@id": "http://example.com/motherName",
-            "@type": "http://www.w3.org/2001/XMLSchema#string",
-            "description": "The full name of the mother of the certificate holder."
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
           },
           "id": {
             "@id": "https://schema.org/identifier",
-            "@type": "http://www.w3.org/2001/XMLSchema#string",
-            "description": "A unique identifier for the certificate holder."
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
           },
           "rollNumber": {
             "@id": "http://example.com/rollNumber",
-            "@type": "http://www.w3.org/2001/XMLSchema#string",
-            "description": "The roll number assigned to the student during their academic tenure."
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
           },
           "courseName": {
             "@id": "http://example.com/courseName",
-            "@type": "http://www.w3.org/2001/XMLSchema#string",
-            "description": "The name of the course or program."
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
           },
           "userName": {
             "@id": "https://schema.org/name",
-            "@type": "http://www.w3.org/2001/XMLSchema#string",
-            "description": "The full name of the certificate holder."
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
           }
-        },
-        "description": "Details about the certificate holder."
+        }
       }
     }
   }
