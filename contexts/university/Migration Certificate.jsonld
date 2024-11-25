@@ -1,56 +1,49 @@
 {
     "@context": {
-      "@version": 1.1,
-      "credentialName": {
-        "@id": "https://schema.org/name",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "id": {
-        "@id": "@id",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "dateOfCreation": {
-        "@id": "https://schema.org/dateCreated",
-        "@type": "http://www.w3.org/2001/XMLSchema#date"
-      },
-      "issuer": {
-        "@id": "https://schema.org/issuer",
-        "@type": "https://schema.org/Organization"
-      },
-      "validFrom": {
-        "@id": "https://schema.org/validFrom",
-        "@type": "http://www.w3.org/2001/XMLSchema#date"
-      },
-      "credentialSubject": {
-        "@id": "http://example.com/credentialSubject",
-        "@type": "http://example.com/Person",
-        "@context": {
-          "fatherName": {
+        "@version": 1.1,
+        "credentialName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "id": {
+            "@id": "@id",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "issuer": {
+            "@id": "https://schema.org/issuer",
+            "@type": "@id"
+        },
+        "validFrom": {
+            "@id": "https://schema.org/validFrom",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "credentialSubject": {
+            "@id": "http://example.com/credentialSubject",
+            "@type": "@id"
+        },
+        "fatherName": {
             "@id": "http://example.com/fatherName",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
-          },
-          "motherName": {
+        },
+        "motherName": {
             "@id": "http://example.com/motherName",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
-          },
-          "id": {
+        },
+        "subjectId": {
             "@id": "http://example.com/identifier",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
-          },
-          "rollNumber": {
+        },
+        "rollNumber": {
             "@id": "http://example.com/rollNumber",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
-          },
-          "courseName": {
+        },
+        "courseName": {
             "@id": "http://example.com/courseName",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
-          },
-          "userName": {
+        },
+        "userName": {
             "@id": "http://example.com/userName",
             "@type": "http://www.w3.org/2001/XMLSchema#string"
-          }
         }
-      }
     }
-  }
-  
+}
