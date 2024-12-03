@@ -1,179 +1,96 @@
 {
     "@context": {
         "@version": 1.1,
-        "@protected": true,
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "ex": "https://example.org/terms#",
-        "id": "@id",
-        "type": "@type",
-        "credentialName": "schema:name",
-        "institutionDetails": {
-            "@id": "schema:provider",
-            "@type": "schema:Organization",
-            "@context": {
-                "@version": 1.1,
-                "institutionName": "schema:name",
-                "officialAddress": "schema:address",
-                "contactInformation": {
-                    "@id": "schema:contactPoint",
-                    "@type": "schema:ContactPoint",
-                    "@context": {
-                        "@version": 1.1,
-                        "phoneNumber": "schema:telephone",
-                        "email": "schema:email"
-                    }
-                },
-                "officialLogoOrSeal": {
-                    "@id": "schema:logo",
-                    "@type": "@id"
-                }
-            }
+        "credentialName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "studentDetails": {
-            "@id": "schema:about",
-            "@type": "schema:Person",
-            "@context": {
-                "@version": 1.1,
-                "studentName": "schema:name",
-                "studentRollNumberOrID": "schema:identifier",
-                "dateOfBirth": {
-                    "@id": "schema:birthDate",
-                    "@type": "xsd:date"
-                },
-                "admissionYearOrDateOfEnrollment": {
-                    "@id": "ex:admissionYearOrDateOfEnrollment",
-                    "@type": "xsd:date"
-                },
-                "programOrCourseEnrolled": "schema:educationalProgram",
-                "departmentOrFacultyName": "schema:department"
-            }
+        "issuer": {
+            "@id": "https://schema.org/issuer",
+            "@type": "@id"
         },
-        "courseDetails": {
-            "@id": "ex:courseDetails",
-            "@type": "ex:CourseDetails",
-            "@context": {
-                "@version": 1.1,
-                "durationOfCourse": "ex:durationOfCourse",
-                "yearOfStudy": "ex:yearOfStudy"
-            }
-        },
-        "purposeStatement": {
-            "@id": "ex:purposeStatement",
-            "@type": "ex:PurposeStatement",
-            "@context": {
-                "@version": 1.1,
-                "enrollmentConfirmation": "ex:enrollmentConfirmation",
-                "purposeOfIssuance": "ex:purposeOfIssuance"
-            }
-        },
-        "authorizedSignatory": {
-            "@id": "schema:signatory",
-            "@type": "schema:Person",
-            "@context": {
-                "@version": 1.1,
-                "signatoryName": "schema:name",
-                "designation": "schema:jobTitle",
-                "signature": {
-                    "@id": "schema:signature",
-                    "@type": "@id"
-                },
-                "institutionSealOrStamp": {
-                    "@id": "schema:image",
-                    "@type": "@id"
-                }
-            }
+        "validFrom": {
+            "@id": "https://schema.org/validFrom",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "credentialSubject": {
-            "@id": "schema:credentialSubject",
-            "@context": {
-                "id": "@id",
-                "institutionDetails": {
-                    "@id": "schema:provider",
-                    "@type": "schema:Organization",
-                    "@context": {
-                        "@version": 1.1,
-                        "institutionName": "schema:name",
-                        "officialAddress": "schema:address",
-                        "contactInformation": {
-                            "@id": "schema:contactPoint",
-                            "@type": "schema:ContactPoint",
-                            "@context": {
-                                "@version": 1.1,
-                                "phoneNumber": "schema:telephone",
-                                "email": "schema:email"
-                            }
-                        },
-                        "officialLogoOrSeal": {
-                            "@id": "schema:logo",
-                            "@type": "@id"
-                        }
-                    }
-                },
-                "studentDetails": {
-                    "@id": "schema:about",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "@version": 1.1,
-                        "studentName": "schema:name",
-                        "studentRollNumberOrID": "schema:identifier",
-                        "dateOfBirth": {
-                            "@id": "schema:birthDate",
-                            "@type": "xsd:date"
-                        },
-                        "admissionYearOrDateOfEnrollment": {
-                            "@id": "ex:admissionYearOrDateOfEnrollment",
-                            "@type": "xsd:date"
-                        },
-                        "programOrCourseEnrolled": "schema:educationalProgram",
-                        "departmentOrFacultyName": "schema:department"
-                    }
-                },
-                "courseDetails": {
-                    "@id": "ex:courseDetails",
-                    "@type": "ex:CourseDetails",
-                    "@context": {
-                        "@version": 1.1,
-                        "durationOfCourse": "ex:durationOfCourse",
-                        "yearOfStudy": "ex:yearOfStudy"
-                    }
-                },
-                "purposeStatement": {
-                    "@id": "ex:purposeStatement",
-                    "@type": "ex:PurposeStatement",
-                    "@context": {
-                        "@version": 1.1,
-                        "enrollmentConfirmation": "ex:enrollmentConfirmation",
-                        "purposeOfIssuance": "ex:purposeOfIssuance"
-                    }
-                },
-                "authorizedSignatory": {
-                    "@id": "schema:signatory",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "@version": 1.1,
-                        "signatoryName": "schema:name",
-                        "designation": "schema:jobTitle",
-                        "signature": {
-                            "@id": "schema:signature",
-                            "@type": "@id"
-                        },
-                        "institutionSealOrStamp": {
-                            "@id": "schema:image",
-                            "@type": "@id"
-                        }
-                    }
-                }
-            }
+            "@id": "http://example.com/credentialSubject"
         },
-        "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
-        "SelfSignedCredential": {
-            "@type": "@id",
-            "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
+        "institutionName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "JsonSchemaValidator2018": {
-            "@type": "@id",
-            "@id": "https://w3id.org/security#JsonSchemaValidator2018"
+        "officialAddress": {
+            "@id": "https://schema.org/address",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "phoneNumber": {
+            "@id": "https://schema.org/telephone",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "email": {
+            "@id": "https://schema.org/email",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "officialLogoOrSeal": {
+            "@id": "https://schema.org/logo",
+            "@type": "@id"
+        },
+        "studentName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "studentRollNumberOrID": {
+            "@id": "https://schema.org/identifier",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "dateOfBirth": {
+            "@id": "https://schema.org/birthDate",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "admissionYearOrDateOfEnrollment": {
+            "@id": "https://example.org/admissionYearOrDateOfEnrollment",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "programOrCourseEnrolled": {
+            "@id": "https://schema.org/educationalProgram",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "departmentOrFacultyName": {
+            "@id": "https://schema.org/department",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "durationOfCourse": {
+            "@id": "https://example.org/durationOfCourse",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "yearOfStudy": {
+            "@id": "https://example.org/yearOfStudy",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "enrollmentConfirmation": {
+            "@id": "https://example.org/enrollmentConfirmation",
+            "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "purposeOfIssuance": {
+            "@id": "https://example.org/purposeOfIssuance",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signatoryName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "designation": {
+            "@id": "https://schema.org/jobTitle",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signature": {
+            "@id": "https://schema.org/signature",
+            "@type": "@id"
+        },
+        "institutionSealOrStamp": {
+            "@id": "https://schema.org/image",
+            "@type": "@id"
         }
     }
 }

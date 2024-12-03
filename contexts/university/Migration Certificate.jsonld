@@ -1,6 +1,7 @@
 {
     "@context": {
       "@version": 1.1,
+      "@protected": true,
       "credentialName": {
         "@id": "https://schema.org/name",
         "@type": "http://www.w3.org/2001/XMLSchema#string"

@@ -2,136 +2,85 @@
     "@context": {
         "@version": 1.1,
         "@protected": true,
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "ex": "https://example.org/terms#",
-        "id": "@id",
-        "type": "@type",
-        "credentialName": "schema:name",
-        "institutionDetails": {
-            "@id": "schema:provider",
-            "@type": "schema:Organization",
-            "@context": {
-                "institutionName": "schema:name",
-                "officialAddress": "schema:address",
-                "contactInformation": {
-                    "@id": "schema:contactPoint",
-                    "@type": "schema:ContactPoint",
-                    "@context": {
-                        "phoneNumber": "schema:telephone",
-                        "email": "schema:email"
-                    }
-                },
-                "officialLogoOrSeal": {
-                    "@id": "schema:logo",
-                    "@type": "@id"
-                }
-            }
+        "credentialName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "recipientDetails": {
-            "@id": "schema:recipient",
-            "@type": "schema:Person",
-            "@context": {
-                "studentName": "schema:name",
-                "studentIDOrRollNumber": "schema:identifier",
-                "departmentOrFaculty": "schema:department",
-                "courseOrProgram": "schema:educationalProgram"
-            }
+        "issuer": {
+            "@id": "https://schema.org/issuer",
+            "@type": "@id"
         },
-        "achievementDetails": {
-            "@id": "ex:achievementDetails",
-            "@type": "ex:AchievementDetails",
-            "@context": {
-                "statementOfMerit": "schema:description",
-                "specificAwardOrRanking": "ex:specificAwardOrRanking",
-                "academicYearOrTerm": "ex:academicYearOrTerm"
-            }
-        },
-        "authorizedSignatory": {
-            "@id": "schema:signatory",
-            "@type": "schema:Person",
-            "@context": {
-                "signatoryName": "schema:name",
-                "designation": "schema:jobTitle",
-                "signature": {
-                    "@id": "schema:signature",
-                    "@type": "@id"
-                },
-                "institutionSealOrStamp": {
-                    "@id": "schema:image",
-                    "@type": "@id"
-                }
-            }
+        "validFrom": {
+            "@id": "https://schema.org/validFrom",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "credentialSubject": {
-            "@id": "schema:credentialSubject",
-            "@context": {
-                "id": "@id",
-                "institutionDetails": {
-                    "@id": "schema:provider",
-                    "@type": "schema:Organization",
-                    "@context": {
-                        "institutionName": "schema:name",
-                        "officialAddress": "schema:address",
-                        "contactInformation": {
-                            "@id": "schema:contactPoint",
-                            "@type": "schema:ContactPoint",
-                            "@context": {
-                                "phoneNumber": "schema:telephone",
-                                "email": "schema:email"
-                            }
-                        },
-                        "officialLogoOrSeal": {
-                            "@id": "schema:logo",
-                            "@type": "@id"
-                        }
-                    }
-                },
-                "recipientDetails": {
-                    "@id": "schema:recipient",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "studentName": "schema:name",
-                        "studentIDOrRollNumber": "schema:identifier",
-                        "departmentOrFaculty": "schema:department",
-                        "courseOrProgram": "schema:educationalProgram"
-                    }
-                },
-                "achievementDetails": {
-                    "@id": "ex:achievementDetails",
-                    "@type": "ex:AchievementDetails",
-                    "@context": {
-                        "statementOfMerit": "schema:description",
-                        "specificAwardOrRanking": "ex:specificAwardOrRanking",
-                        "academicYearOrTerm": "ex:academicYearOrTerm"
-                    }
-                },
-                "authorizedSignatory": {
-                    "@id": "schema:signatory",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "signatoryName": "schema:name",
-                        "designation": "schema:jobTitle",
-                        "signature": {
-                            "@id": "schema:signature",
-                            "@type": "@id"
-                        },
-                        "institutionSealOrStamp": {
-                            "@id": "schema:image",
-                            "@type": "@id"
-                        }
-                    }
-                }
-            }
+            "@id": "http://example.com/credentialSubject",
+            "@type": "@id"
         },
-        "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
-        "SelfSignedCredential": {
-            "@type": "@id",
-            "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
+        "institutionName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "JsonSchemaValidator2018": {
-            "@type": "@id",
-            "@id": "https://w3id.org/security#JsonSchemaValidator2018"
+        "officialAddress": {
+            "@id": "https://schema.org/address",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "phoneNumber": {
+            "@id": "https://schema.org/telephone",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "email": {
+            "@id": "https://schema.org/email",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "officialLogoOrSeal": {
+            "@id": "https://schema.org/logo",
+            "@type": "@id"
+        },
+        "studentName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "studentIDOrRollNumber": {
+            "@id": "https://schema.org/identifier",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "departmentOrFaculty": {
+            "@id": "https://schema.org/department",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "courseOrProgram": {
+            "@id": "https://schema.org/educationalProgram",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "statementOfMerit": {
+            "@id": "https://schema.org/description",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "specificAwardOrRanking": {
+            "@id": "https://example.org/specificAwardOrRanking",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "academicYearOrTerm": {
+            "@id": "https://example.org/academicYearOrTerm",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signatoryName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "designation": {
+            "@id": "https://schema.org/jobTitle",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signature": {
+            "@id": "https://schema.org/signature",
+            "@type": "@id"
+        },
+        "institutionSealOrStamp": {
+            "@id": "https://schema.org/image",
+            "@type": "@id"
         }
     }
 }

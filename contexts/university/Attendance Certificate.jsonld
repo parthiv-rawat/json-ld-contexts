@@ -1,181 +1,100 @@
 {
     "@context": {
         "@version": 1.1,
-        "@protected": true,
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "ex": "https://example.org/terms#",
-        "id": "@id",
-        "type": "@type",
-        "credentialName": "schema:name",
-        "institutionDetails": {
-            "@id": "schema:provider",
-            "@type": "schema:Organization",
-            "@context": {
-                "institutionName": "schema:name",
-                "officialAddress": "schema:address",
-                "contactInformation": {
-                    "@id": "schema:contactPoint",
-                    "@type": "schema:ContactPoint",
-                    "@context": {
-                        "phoneNumber": "schema:telephone",
-                        "email": "schema:email"
-                    }
-                },
-                "officialLogoOrSeal": {
-                    "@id": "schema:logo",
-                    "@type": "@id"
-                }
-            }
+        "credentialName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "studentDetails": {
-            "@id": "schema:about",
-            "@type": "schema:Person",
-            "@context": {
-                "studentName": "schema:name",
-                "studentIDOrRollNumber": "schema:identifier",
-                "departmentOrFaculty": "schema:department",
-                "courseOrProgramEnrolled": "schema:educationalProgram"
-            }
+        "issuer": {
+            "@id": "https://schema.org/issuer",
+            "@type": "@id"
         },
-        "attendancePeriod": {
-            "@id": "ex:attendancePeriod",
-            "@type": "ex:AttendancePeriod",
-            "@context": {
-                "startDate": {
-                    "@id": "schema:startDate",
-                    "@type": "xsd:date"
-                },
-                "endDate": {
-                    "@id": "schema:endDate",
-                    "@type": "xsd:date"
-                },
-                "termOrSemester": "ex:termOrSemester"
-            }
-        },
-        "attendanceDetails": {
-            "@id": "ex:attendanceDetails",
-            "@type": "ex:AttendanceDetails",
-            "@context": {
-                "totalDaysAttended": {
-                    "@id": "ex:totalDaysAttended",
-                    "@type": "xsd:integer"
-                },
-                "attendancePercentage": {
-                    "@id": "ex:attendancePercentage",
-                    "@type": "xsd:decimal"
-                },
-                "specificSessionsAttended": "ex:specificSessionsAttended",
-                "attendanceRemarks": "ex:attendanceRemarks"
-            }
-        },
-        "authorizedSignatory": {
-            "@id": "schema:signatory",
-            "@type": "schema:Person",
-            "@context": {
-                "signatoryName": "schema:name",
-                "designation": "schema:jobTitle",
-                "signature": {
-                    "@id": "schema:signature",
-                    "@type": "@id"
-                },
-                "institutionSealOrStamp": {
-                    "@id": "schema:image",
-                    "@type": "@id"
-                }
-            }
+        "validFrom": {
+            "@id": "https://schema.org/validFrom",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "credentialSubject": {
-            "@id": "schema:credentialSubject",
-            "@context": {
-                "id": "@id",
-                "institutionDetails": {
-                    "@id": "schema:provider",
-                    "@type": "schema:Organization",
-                    "@context": {
-                        "institutionName": "schema:name",
-                        "officialAddress": "schema:address",
-                        "contactInformation": {
-                            "@id": "schema:contactPoint",
-                            "@type": "schema:ContactPoint",
-                            "@context": {
-                                "phoneNumber": "schema:telephone",
-                                "email": "schema:email"
-                            }
-                        },
-                        "officialLogoOrSeal": {
-                            "@id": "schema:logo",
-                            "@type": "@id"
-                        }
-                    }
-                },
-                "studentDetails": {
-                    "@id": "schema:about",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "studentName": "schema:name",
-                        "studentIDOrRollNumber": "schema:identifier",
-                        "departmentOrFaculty": "schema:department",
-                        "courseOrProgramEnrolled": "schema:educationalProgram"
-                    }
-                },
-                "attendancePeriod": {
-                    "@id": "ex:attendancePeriod",
-                    "@type": "ex:AttendancePeriod",
-                    "@context": {
-                        "startDate": {
-                            "@id": "schema:startDate",
-                            "@type": "xsd:date"
-                        },
-                        "endDate": {
-                            "@id": "schema:endDate",
-                            "@type": "xsd:date"
-                        },
-                        "termOrSemester": "ex:termOrSemester"
-                    }
-                },
-                "attendanceDetails": {
-                    "@id": "ex:attendanceDetails",
-                    "@type": "ex:AttendanceDetails",
-                    "@context": {
-                        "totalDaysAttended": {
-                            "@id": "ex:totalDaysAttended",
-                            "@type": "xsd:integer"
-                        },
-                        "attendancePercentage": {
-                            "@id": "ex:attendancePercentage",
-                            "@type": "xsd:decimal"
-                        },
-                        "specificSessionsAttended": "ex:specificSessionsAttended",
-                        "attendanceRemarks": "ex:attendanceRemarks"
-                    }
-                },
-                "authorizedSignatory": {
-                    "@id": "schema:signatory",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "signatoryName": "schema:name",
-                        "designation": "schema:jobTitle",
-                        "signature": {
-                            "@id": "schema:signature",
-                            "@type": "@id"
-                        },
-                        "institutionSealOrStamp": {
-                            "@id": "schema:image",
-                            "@type": "@id"
-                        }
-                    }
-                }
-            }
+            "@id": "http://example.com/credentialSubject"
         },
-        "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
-        "SelfSignedCredential": {
-            "@type": "@id",
-            "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
+        "phoneNumber": {
+            "@id": "https://schema.org/telephone",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "JsonSchemaValidator2018": {
-            "@type": "@id",
-            "@id": "https://w3id.org/security#JsonSchemaValidator2018"
+        "email": {
+            "@id": "https://schema.org/email",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "institutionName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "officialLogoOrSeal": {
+            "@id": "https://schema.org/logo",
+            "@type": "@id"
+        },
+        "officialAddress": {
+            "@id": "https://schema.org/address",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "studentName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "studentIDOrRollNumber": {
+            "@id": "https://schema.org/identifier",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "departmentOrFaculty": {
+            "@id": "https://schema.org/department",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "courseOrProgramEnrolled": {
+            "@id": "https://schema.org/educationalProgram",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "startDate": {
+            "@id": "https://schema.org/startDate",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "endDate": {
+            "@id": "https://schema.org/endDate",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "termOrSemester": {
+            "@id": "https://example.org/termOrSemester",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "totalDaysAttended": {
+            "@id": "https://example.org/totalDaysAttended",
+            "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "attendancePercentage": {
+            "@id": "https://example.org/attendancePercentage",
+            "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "specificSessionsAttended": {
+            "@id": "https://example.org/specificSessionsAttended",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "attendanceRemarks": {
+            "@id": "https://example.org/attendanceRemarks",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signatoryName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "designation": {
+            "@id": "https://schema.org/jobTitle",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signature": {
+            "@id": "https://schema.org/signature",
+            "@type": "@id"
+        },
+        "institutionSealOrStamp": {
+            "@id": "https://schema.org/image",
+            "@type": "@id"
         }
     }
 }
