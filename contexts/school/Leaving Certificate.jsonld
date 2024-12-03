@@ -2,422 +2,273 @@
     "@context": {
         "@version": 1.1,
         "@protected": true,
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "ex": "https://example.org/terms#",
-        "id": "@id",
-        "type": "@type",
-        "credentialName": "schema:name",
-        "certificateTitle": "ex:certificateTitle",
-        "schoolInformation": {
-            "@id": "schema:provider",
-            "@type": "schema:EducationalOrganization",
-            "@context": {
-                "schoolName": "schema:name",
-                "schoolLogoOrEmblem": {
-                    "@id": "schema:logo",
-                    "@type": "@id"
-                },
-                "schoolAddress": "schema:address",
-                "contactInformation": {
-                    "@id": "schema:contactPoint",
-                    "@type": "schema:ContactPoint",
-                    "@context": {
-                        "phoneNumber": "schema:telephone",
-                        "emailAddress": "schema:email",
-                        "websiteURL": {
-                            "@id": "schema:url",
-                            "@type": "@id"
-                        }
-                    }
-                },
-                "affiliationDetails": "ex:affiliationDetails",
-                "boardOfEducation": "ex:boardOfEducation",
-                "affiliationNumberOrAccreditationInformation": "ex:affiliationNumberOrAccreditationInformation",
-                "accreditationInformation": "ex:accreditationInformation"
-            }
+        "credentialName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "studentInformation": {
-            "@id": "schema:about",
-            "@type": "schema:Person",
-            "@context": {
-                "fullName": "schema:name",
-                "dateOfBirth": {
-                    "@id": "schema:birthDate",
-                    "@type": "xsd:date"
-                },
-                "placeOfBirth": "ex:placeOfBirth",
-                "gender": "schema:gender",
-                "nationality": "schema:nationality",
-                "religion": "ex:religion",
-                "casteOrCategory": "ex:casteOrCategory",
-                "mothersName": "ex:mothersName",
-                "fathersOrGuardiansName": "ex:fathersOrGuardiansName",
-                "residentialAddress": "schema:address",
-                "admissionNumberOrRollNumberOrStudentID": "schema:identifier",
-                "studentPhotograph": {
-                    "@id": "schema:image",
-                    "@type": "@id"
-                },
-                "classOrGrade": "ex:classOrGrade",
-                "section": "ex:section"
-            }
+        "issuer": {
+            "@id": "https://schema.org/issuer",
+            "@type": "@id"
         },
-        "academicDetails": {
-            "@id": "ex:academicDetails",
-            "@type": "ex:AcademicDetails",
-            "@context": {
-                "dateOfAdmission": {
-                    "@id": "ex:dateOfAdmission",
-                    "@type": "xsd:date"
-                },
-                "classOfAdmission": "ex:classOfAdmission",
-                "lastClassAttended": "ex:lastClassAttended",
-                "academicSession": "ex:academicSession",
-                "subjectsStudied": {
-                    "@id": "ex:subjectsStudied",
-                    "@container": "@list"
-                },
-                "mediumOfInstruction": "ex:mediumOfInstruction",
-                "eligibleForAdmissionToClass": "ex:eligibleForAdmissionToClass"
-            }
-        },
-        "attendanceRecord": {
-            "@id": "ex:attendanceRecord",
-            "@type": "ex:AttendanceRecord",
-            "@context": {
-                "totalWorkingDays": {
-                    "@id": "ex:totalWorkingDays",
-                    "@type": "xsd:integer"
-                },
-                "totalDaysPresent": {
-                    "@id": "ex:totalDaysPresent",
-                    "@type": "xsd:integer"
-                },
-                "percentageOfAttendance": {
-                    "@id": "ex:percentageOfAttendance",
-                    "@type": "xsd:decimal"
-                }
-            }
-        },
-        "conductAndDiscipline": {
-            "@id": "ex:conductAndDiscipline",
-            "@type": "ex:ConductAndDiscipline",
-            "@context": {
-                "generalConduct": "ex:generalConduct",
-                "disciplineRecord": "ex:disciplineRecord"
-            }
-        },
-        "examinationAndResultDetails": {
-            "@id": "ex:examinationAndResultDetails",
-            "@type": "ex:ExaminationAndResultDetails",
-            "@context": {
-                "qualifiedForPromotion": "ex:qualifiedForPromotion",
-                "appearedForLastExamination": "ex:appearedForLastExamination",
-                "resultOfLastExamination": "ex:resultOfLastExamination",
-                "marksOrGradesObtained": "ex:marksOrGradesObtained",
-                "coCurricularAndExtraCurricularParticipation": "ex:coCurricularAndExtraCurricularParticipation"
-            }
-        },
-        "reasonsForLeaving": {
-            "@id": "ex:reasonsForLeaving",
-            "@type": "ex:ReasonsForLeaving",
-            "@context": {
-                "reasonForLeaving": "ex:reasonForLeaving",
-                "dateOfApplicationForLeavingCertificate": {
-                    "@id": "ex:dateOfApplicationForLeavingCertificate",
-                    "@type": "xsd:date"
-                },
-                "dateOfLeaving": {
-                    "@id": "ex:dateOfLeaving",
-                    "@type": "xsd:date"
-                }
-            }
-        },
-        "feeAndDuesClearance": {
-            "@id": "ex:feeAndDuesClearance",
-            "@type": "ex:FeeAndDuesClearance",
-            "@context": {
-                "allDuesPaid": "ex:allDuesPaid",
-                "concessionsAvailed": "ex:concessionsAvailed",
-                "feePaidUpTo": {
-                    "@id": "ex:feePaidUpTo",
-                    "@type": "xsd:date"
-                }
-            }
-        },
-        "certificationStatement": {
-            "@id": "ex:certificationStatement",
-            "@type": "ex:CertificationStatement",
-            "@context": {
-                "statement": "ex:statement",
-                "dateOfIssue": {
-                    "@id": "ex:dateOfIssue",
-                    "@type": "xsd:date"
-                },
-                "placeOfIssue": "ex:placeOfIssue"
-            }
-        },
-        "signatoryDetails": {
-            "@id": "schema:signatory",
-            "@type": "schema:Person",
-            "@context": {
-                "signatoryName": "schema:name",
-                "designation": "schema:jobTitle",
-                "signature": {
-                    "@id": "schema:signature",
-                    "@type": "@id"
-                },
-                "schoolSealOrStamp": {
-                    "@id": "schema:image",
-                    "@type": "@id"
-                }
-            }
-        },
-        "verificationDetails": {
-            "@id": "ex:verificationDetails",
-            "@type": "ex:VerificationDetails",
-            "@context": {
-                "certificateNumberOrID": "schema:serialNumber",
-                "qrCodeOrBarcode": {
-                    "@id": "ex:qrCodeOrBarcode",
-                    "@type": "@id"
-                },
-                "verificationURL": {
-                    "@id": "schema:url",
-                    "@type": "@id"
-                }
-            }
-        },
-        "additionalRemarks": {
-            "@id": "ex:additionalRemarks",
-            "@type": "ex:AdditionalRemarks",
-            "@context": {
-                "specialComments": "ex:specialComments",
-                "healthStatus": "ex:healthStatus",
-                "recommendationsForFutureSchool": "ex:recommendationsForFutureSchool"
-            }
-        },
-        "instructionsForReceivingInstitution": {
-            "@id": "ex:instructionsForReceivingInstitution",
-            "@type": "ex:InstructionsForReceivingInstitution",
-            "@context": {
-                "validityOfCertificate": "ex:validityOfCertificate",
-                "instructionsForAdmissions": "ex:instructionsForAdmissions"
-            }
+        "validFrom": {
+            "@id": "https://schema.org/validFrom",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "credentialSubject": {
-            "@id": "schema:credentialSubject",
-            "@context": {
-                "id": "@id",
-                "certificateTitle": "ex:certificateTitle",
-                "schoolInformation": {
-                    "@id": "schema:provider",
-                    "@type": "schema:EducationalOrganization",
-                    "@context": {
-                        "schoolName": "schema:name",
-                        "schoolLogoOrEmblem": {
-                            "@id": "schema:logo",
-                            "@type": "@id"
-                        },
-                        "schoolAddress": "schema:address",
-                        "contactInformation": {
-                            "@id": "schema:contactPoint",
-                            "@type": "schema:ContactPoint",
-                            "@context": {
-                                "phoneNumber": "schema:telephone",
-                                "emailAddress": "schema:email",
-                                "websiteURL": {
-                                    "@id": "schema:url",
-                                    "@type": "@id"
-                                }
-                            }
-                        },
-                        "affiliationDetails": "ex:affiliationDetails",
-                        "boardOfEducation": "ex:boardOfEducation",
-                        "affiliationNumberOrAccreditationInformation": "ex:affiliationNumberOrAccreditationInformation",
-                        "accreditationInformation": "ex:accreditationInformation"
-                    }
-                },
-                "studentInformation": {
-                    "@id": "schema:about",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "fullName": "schema:name",
-                        "dateOfBirth": {
-                            "@id": "schema:birthDate",
-                            "@type": "xsd:date"
-                        },
-                        "placeOfBirth": "ex:placeOfBirth",
-                        "gender": "schema:gender",
-                        "nationality": "schema:nationality",
-                        "religion": "ex:religion",
-                        "casteOrCategory": "ex:casteOrCategory",
-                        "mothersName": "ex:mothersName",
-                        "fathersOrGuardiansName": "ex:fathersOrGuardiansName",
-                        "residentialAddress": "schema:address",
-                        "admissionNumberOrRollNumberOrStudentID": "schema:identifier",
-                        "studentPhotograph": {
-                            "@id": "schema:image",
-                            "@type": "@id"
-                        },
-                        "classOrGrade": "ex:classOrGrade",
-                        "section": "ex:section"
-                    }
-                },
-                "academicDetails": {
-                    "@id": "ex:academicDetails",
-                    "@type": "ex:AcademicDetails",
-                    "@context": {
-                        "dateOfAdmission": {
-                            "@id": "ex:dateOfAdmission",
-                            "@type": "xsd:date"
-                        },
-                        "classOfAdmission": "ex:classOfAdmission",
-                        "lastClassAttended": "ex:lastClassAttended",
-                        "academicSession": "ex:academicSession",
-                        "subjectsStudied": {
-                            "@id": "ex:subjectsStudied",
-                            "@container": "@list"
-                        },
-                        "mediumOfInstruction": "ex:mediumOfInstruction",
-                        "eligibleForAdmissionToClass": "ex:eligibleForAdmissionToClass"
-                    }
-                },
-                "attendanceRecord": {
-                    "@id": "ex:attendanceRecord",
-                    "@type": "ex:AttendanceRecord",
-                    "@context": {
-                        "totalWorkingDays": {
-                            "@id": "ex:totalWorkingDays",
-                            "@type": "xsd:integer"
-                        },
-                        "totalDaysPresent": {
-                            "@id": "ex:totalDaysPresent",
-                            "@type": "xsd:integer"
-                        },
-                        "percentageOfAttendance": {
-                            "@id": "ex:percentageOfAttendance",
-                            "@type": "xsd:decimal"
-                        }
-                    }
-                },
-                "conductAndDiscipline": {
-                    "@id": "ex:conductAndDiscipline",
-                    "@type": "ex:ConductAndDiscipline",
-                    "@context": {
-                        "generalConduct": "ex:generalConduct",
-                        "disciplineRecord": "ex:disciplineRecord"
-                    }
-                },
-                "examinationAndResultDetails": {
-                    "@id": "ex:examinationAndResultDetails",
-                    "@type": "ex:ExaminationAndResultDetails",
-                    "@context": {
-                        "qualifiedForPromotion": "ex:qualifiedForPromotion",
-                        "appearedForLastExamination": "ex:appearedForLastExamination",
-                        "resultOfLastExamination": "ex:resultOfLastExamination",
-                        "marksOrGradesObtained": "ex:marksOrGradesObtained",
-                        "coCurricularAndExtraCurricularParticipation": "ex:coCurricularAndExtraCurricularParticipation"
-                    }
-                },
-                "reasonsForLeaving": {
-                    "@id": "ex:reasonsForLeaving",
-                    "@type": "ex:ReasonsForLeaving",
-                    "@context": {
-                        "reasonForLeaving": "ex:reasonForLeaving",
-                        "dateOfApplicationForLeavingCertificate": {
-                            "@id": "ex:dateOfApplicationForLeavingCertificate",
-                            "@type": "xsd:date"
-                        },
-                        "dateOfLeaving": {
-                            "@id": "ex:dateOfLeaving",
-                            "@type": "xsd:date"
-                        }
-                    }
-                },
-                "feeAndDuesClearance": {
-                    "@id": "ex:feeAndDuesClearance",
-                    "@type": "ex:FeeAndDuesClearance",
-                    "@context": {
-                        "allDuesPaid": "ex:allDuesPaid",
-                        "concessionsAvailed": "ex:concessionsAvailed",
-                        "feePaidUpTo": {
-                            "@id": "ex:feePaidUpTo",
-                            "@type": "xsd:date"
-                        }
-                    }
-                },
-                "certificationStatement": {
-                    "@id": "ex:certificationStatement",
-                    "@type": "ex:CertificationStatement",
-                    "@context": {
-                        "statement": "ex:statement",
-                        "dateOfIssue": {
-                            "@id": "ex:dateOfIssue",
-                            "@type": "xsd:date"
-                        },
-                        "placeOfIssue": "ex:placeOfIssue"
-                    }
-                },
-                "signatoryDetails": {
-                    "@id": "schema:signatory",
-                    "@type": "schema:Person",
-                    "@context": {
-                        "signatoryName": "schema:name",
-                        "designation": "schema:jobTitle",
-                        "signature": {
-                            "@id": "schema:signature",
-                            "@type": "@id"
-                        },
-                        "schoolSealOrStamp": {
-                            "@id": "schema:image",
-                            "@type": "@id"
-                        }
-                    }
-                },
-                "verificationDetails": {
-                    "@id": "ex:verificationDetails",
-                    "@type": "ex:VerificationDetails",
-                    "@context": {
-                        "certificateNumberOrID": "schema:serialNumber",
-                        "qrCodeOrBarcode": {
-                            "@id": "ex:qrCodeOrBarcode",
-                            "@type": "@id"
-                        },
-                        "verificationURL": {
-                            "@id": "schema:url",
-                            "@type": "@id"
-                        }
-                    }
-                },
-                "additionalRemarks": {
-                    "@id": "ex:additionalRemarks",
-                    "@type": "ex:AdditionalRemarks",
-                    "@context": {
-                        "specialComments": "ex:specialComments",
-                        "healthStatus": "ex:healthStatus",
-                        "recommendationsForFutureSchool": "ex:recommendationsForFutureSchool"
-                    }
-                },
-                "instructionsForReceivingInstitution": {
-                    "@id": "ex:instructionsForReceivingInstitution",
-                    "@type": "ex:InstructionsForReceivingInstitution",
-                    "@context": {
-                        "validityOfCertificate": "ex:validityOfCertificate",
-                        "instructionsForAdmissions": "ex:instructionsForAdmissions"
-                    }
-                }
-            }
+            "@id": "http://example.com/credentialSubject",
+            "@type": "@id"
         },
-        "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
-        "SelfSignedCredential": {
-            "@type": "@id",
-            "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
+        "schoolName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
-        "JsonSchemaValidator2018": {
-            "@type": "@id",
-            "@id": "https://w3id.org/security#JsonSchemaValidator2018"
+        "schoolLogoOrEmblem": {
+            "@id": "https://schema.org/logo",
+            "@type": "@id"
+        },
+        "schoolAddress": {
+            "@id": "https://schema.org/address",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "certificateTitle": {
+            "@id": "https://example.org/certificateTitle",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "phoneNumber": {
+            "@id": "https://schema.org/telephone",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "emailAddress": {
+            "@id": "https://schema.org/email",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "websiteURL": {
+            "@id": "https://schema.org/url",
+            "@type": "@id"
+        },
+        "affiliationDetails": {
+            "@id": "https://example.org/affiliationDetails",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "boardOfEducation": {
+            "@id": "https://example.org/boardOfEducation",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "affiliationNumberOrAccreditationInformation": {
+            "@id": "https://example.org/affiliationNumberOrAccreditationInformation",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "accreditationInformation": {
+            "@id": "https://example.org/accreditationInformation",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "fullName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "dateOfBirth": {
+            "@id": "https://schema.org/birthDate",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "placeOfBirth": {
+            "@id": "https://example.org/placeOfBirth",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "gender": {
+            "@id": "https://schema.org/gender",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "nationality": {
+            "@id": "https://schema.org/nationality",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "religion": {
+            "@id": "https://example.org/religion",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "casteOrCategory": {
+            "@id": "https://example.org/casteOrCategory",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "mothersName": {
+            "@id": "https://example.org/mothersName",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "fathersOrGuardiansName": {
+            "@id": "https://example.org/fathersOrGuardiansName",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "residentialAddress": {
+            "@id": "https://schema.org/address",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "admissionNumberOrRollNumberOrStudentID": {
+            "@id": "https://schema.org/identifier",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "studentPhotograph": {
+            "@id": "https://schema.org/image",
+            "@type": "@id"
+        },
+        "classOrGrade": {
+            "@id": "https://example.org/classOrGrade",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "section": {
+            "@id": "https://example.org/section",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "dateOfAdmission": {
+            "@id": "https://example.org/dateOfAdmission",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "classOfAdmission": {
+            "@id": "https://example.org/classOfAdmission",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "lastClassAttended": {
+            "@id": "https://example.org/lastClassAttended",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "academicSession": {
+            "@id": "https://example.org/academicSession",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "subjectsStudied": {
+            "@id": "https://example.org/subjectsStudied",
+            "@container": "@list"
+        },
+        "mediumOfInstruction": {
+            "@id": "https://example.org/mediumOfInstruction",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "eligibleForAdmissionToClass": {
+            "@id": "https://example.org/eligibleForAdmissionToClass",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "totalWorkingDays": {
+            "@id": "https://example.org/totalWorkingDays",
+            "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "totalDaysPresent": {
+            "@id": "https://example.org/totalDaysPresent",
+            "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "percentageOfAttendance": {
+            "@id": "https://example.org/percentageOfAttendance",
+            "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+        },
+        "generalConduct": {
+            "@id": "https://example.org/generalConduct",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "disciplineRecord": {
+            "@id": "https://example.org/disciplineRecord",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "qualifiedForPromotion": {
+            "@id": "https://example.org/qualifiedForPromotion",
+            "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "appearedForLastExamination": {
+            "@id": "https://example.org/appearedForLastExamination",
+            "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "resultOfLastExamination": {
+            "@id": "https://example.org/resultOfLastExamination",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "marksOrGradesObtained": {
+            "@id": "https://example.org/marksOrGradesObtained",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "coCurricularAndExtraCurricularParticipation": {
+            "@id": "https://example.org/coCurricularAndExtraCurricularParticipation",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "reasonForLeaving": {
+            "@id": "https://example.org/reasonForLeaving",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "dateOfApplicationForLeavingCertificate": {
+            "@id": "https://example.org/dateOfApplicationForLeavingCertificate",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "dateOfLeaving": {
+            "@id": "https://example.org/dateOfLeaving",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "allDuesPaid": {
+            "@id": "https://example.org/allDuesPaid",
+            "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "concessionsAvailed": {
+            "@id": "https://example.org/concessionsAvailed",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "feePaidUpTo": {
+            "@id": "https://example.org/feePaidUpTo",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "statement": {
+            "@id": "https://example.org/statement",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "dateOfIssue": {
+            "@id": "https://example.org/dateOfIssue",
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "placeOfIssue": {
+            "@id": "https://example.org/placeOfIssue",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signatoryName": {
+            "@id": "https://schema.org/name",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "designation": {
+            "@id": "https://schema.org/jobTitle",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "signature": {
+            "@id": "https://schema.org/signature",
+            "@type": "@id"
+        },
+        "schoolSealOrStamp": {
+            "@id": "https://schema.org/image",
+            "@type": "@id"
+        },
+        "certificateNumberOrID": {
+            "@id": "https://schema.org/serialNumber",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "qrCodeOrBarcode": {
+            "@id": "https://example.org/qrCodeOrBarcode",
+            "@type": "@id"
+        },
+        "verificationURL": {
+            "@id": "https://schema.org/url",
+            "@type": "@id"
+        },
+        "specialComments": {
+            "@id": "https://example.org/specialComments",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "healthStatus": {
+            "@id": "https://example.org/healthStatus",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "recommendationsForFutureSchool": {
+            "@id": "https://example.org/recommendationsForFutureSchool",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "validityOfCertificate": {
+            "@id": "https://example.org/validityOfCertificate",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "instructionsForAdmissions": {
+            "@id": "https://example.org/instructionsForAdmissions",
+            "@type": "http://www.w3.org/2001/XMLSchema#string"
         }
     }
 }

@@ -2,288 +2,149 @@
   "@context": {
     "@version": 1.1,
     "@protected": true,
-    "schema": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "ex": "https://example.org/terms#",
-    "id": "@id",
-    "type": "@type",
-    "credentialName": "schema:name",
-    "certificateTitle": "ex:certificateTitle",
-    "schoolOrOrganizationInformation": {
-      "@id": "schema:provider",
-      "@type": "schema:Organization",
-      "@context": {
-        "organizationName": "schema:name",
-        "organizationLogoOrEmblem": {
-          "@id": "schema:logo",
-          "@type": "@id"
-        },
-        "organizationAddress": "schema:address",
-        "contactInformation": {
-          "@id": "schema:contactPoint",
-          "@type": "schema:ContactPoint",
-          "@context": {
-            "phoneNumber": "schema:telephone",
-            "email": "schema:email",
-            "websiteURL": {
-              "@id": "schema:url",
-              "@type": "@id"
-            }
-          }
-        },
-        "affiliationInformation": "ex:affiliationInformation",
-        "boardOfEducation": "ex:boardOfEducation",
-        "accreditationDetails": "ex:accreditationDetails"
-      }
+    "credentialName": {
+      "@id": "https://schema.org/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "recipientInformation": {
-      "@id": "schema:about",
-      "@type": "schema:Person",
-      "@context": {
-        "fullName": "schema:name",
-        "classOrGrade": "ex:classOrGrade",
-        "section": "ex:section",
-        "rollNumberOrStudentID": "schema:identifier",
-        "dateOfBirth": {
-          "@id": "schema:birthDate",
-          "@type": "xsd:date"
-        },
-        "studentPhotograph": {
-          "@id": "schema:image",
-          "@type": "@id"
-        }
-      }
+    "issuer": {
+      "@id": "https://schema.org/issuer",
+      "@type": "@id"
     },
-    "accomplishmentDetails": {
-      "@id": "ex:accomplishmentDetails",
-      "@type": "ex:AccomplishmentDetails",
-      "@context": {
-        "accomplishmentName": "ex:accomplishmentName",
-        "achievementDate": {
-          "@id": "ex:achievementDate",
-          "@type": "xsd:date"
-        },
-        "descriptionOfAchievement": "schema:description",
-        "levelOfAccomplishment": "ex:levelOfAccomplishment",
-        "positionOrRank": "ex:positionOrRank"
-      }
-    },
-    "certificationStatement": "ex:certificationStatement",
-    "purposeOfCertificate": "ex:purposeOfCertificate",
-    "dateAndPlace": {
-      "@id": "ex:dateAndPlace",
-      "@type": "ex:DateAndPlace",
-      "@context": {
-        "dateOfIssue": {
-          "@id": "schema:dateIssued",
-          "@type": "xsd:date"
-        },
-        "placeOfIssue": "ex:placeOfIssue"
-      }
-    },
-    "signatoryDetails": {
-      "@id": "schema:signatory",
-      "@type": "schema:Person",
-      "@context": {
-        "signatoryName": "schema:name",
-        "signatoryDesignation": "schema:jobTitle",
-        "signatorySignature": {
-          "@id": "schema:signature",
-          "@type": "@id"
-        },
-        "additionalSignatories": {
-          "@id": "ex:additionalSignatories",
-          "@container": "@set",
-          "@type": "schema:Person",
-          "@context": {
-            "name": "schema:name",
-            "designation": "schema:jobTitle",
-            "signature": {
-              "@id": "schema:signature",
-              "@type": "@id"
-            }
-          }
-        },
-        "officialSealOrStamp": {
-          "@id": "schema:image",
-          "@type": "@id"
-        }
-      }
-    },
-    "verificationDetails": {
-      "@id": "ex:verificationDetails",
-      "@type": "ex:VerificationDetails",
-      "@context": {
-        "certificateNumberOrID": "schema:serialNumber",
-        "qrCodeOrBarcode": {
-          "@id": "ex:qrCodeOrBarcode",
-          "@type": "@id"
-        },
-        "verificationURL": {
-          "@id": "schema:url",
-          "@type": "@id"
-        }
-      }
-    },
-    "additionalElements": {
-      "@id": "ex:additionalElements",
-      "@type": "ex:AdditionalElements",
-      "@context": {
-        "schoolMottoOrTagline": "ex:schoolMottoOrTagline",
-        "inspirationalQuotesOrMessages": "ex:inspirationalQuotesOrMessages",
-        "logosOfSponsorsOrPartners": {
-          "@id": "ex:logosOfSponsorsOrPartners",
-          "@container": "@set",
-          "@type": "@id"
-        },
-        "backgroundGraphicsOrWatermarks": "ex:backgroundGraphicsOrWatermarks"
-      }
+    "validFrom": {
+      "@id": "https://schema.org/validFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "credentialSubject": {
-      "@id": "schema:credentialSubject",
-      "@context": {
-        "id": "@id",
-        "certificateTitle": "ex:certificateTitle",
-        "schoolOrOrganizationInformation": {
-          "@id": "schema:provider",
-          "@type": "schema:Organization",
-          "@context": {
-            "organizationName": "schema:name",
-            "organizationLogoOrEmblem": {
-              "@id": "schema:logo",
-              "@type": "@id"
-            },
-            "organizationAddress": "schema:address",
-            "contactInformation": {
-              "@id": "schema:contactPoint",
-              "@type": "schema:ContactPoint",
-              "@context": {
-                "phoneNumber": "schema:telephone",
-                "email": "schema:email",
-                "websiteURL": {
-                  "@id": "schema:url",
-                  "@type": "@id"
-                }
-              }
-            },
-            "affiliationInformation": "ex:affiliationInformation",
-            "boardOfEducation": "ex:boardOfEducation",
-            "accreditationDetails": "ex:accreditationDetails"
-          }
-        },
-        "recipientInformation": {
-          "@id": "schema:about",
-          "@type": "schema:Person",
-          "@context": {
-            "fullName": "schema:name",
-            "classOrGrade": "ex:classOrGrade",
-            "section": "ex:section",
-            "rollNumberOrStudentID": "schema:identifier",
-            "dateOfBirth": {
-              "@id": "schema:birthDate",
-              "@type": "xsd:date"
-            },
-            "studentPhotograph": {
-              "@id": "schema:image",
-              "@type": "@id"
-            }
-          }
-        },
-        "accomplishmentDetails": {
-          "@id": "ex:accomplishmentDetails",
-          "@type": "ex:AccomplishmentDetails",
-          "@context": {
-            "accomplishmentName": "ex:accomplishmentName",
-            "achievementDate": {
-              "@id": "ex:achievementDate",
-              "@type": "xsd:date"
-            },
-            "descriptionOfAchievement": "schema:description",
-            "levelOfAccomplishment": "ex:levelOfAccomplishment",
-            "positionOrRank": "ex:positionOrRank"
-          }
-        },
-        "certificationStatement": "ex:certificationStatement",
-        "purposeOfCertificate": "ex:purposeOfCertificate",
-        "dateAndPlace": {
-          "@id": "ex:dateAndPlace",
-          "@type": "ex:DateAndPlace",
-          "@context": {
-            "dateOfIssue": {
-              "@id": "schema:dateIssued",
-              "@type": "xsd:date"
-            },
-            "placeOfIssue": "ex:placeOfIssue"
-          }
-        },
-        "signatoryDetails": {
-          "@id": "schema:signatory",
-          "@type": "schema:Person",
-          "@context": {
-            "signatoryName": "schema:name",
-            "signatoryDesignation": "schema:jobTitle",
-            "signatorySignature": {
-              "@id": "schema:signature",
-              "@type": "@id"
-            },
-            "additionalSignatories": {
-              "@id": "ex:additionalSignatories",
-              "@container": "@set",
-              "@type": "schema:Person",
-              "@context": {
-                "name": "schema:name",
-                "designation": "schema:jobTitle",
-                "signature": {
-                  "@id": "schema:signature",
-                  "@type": "@id"
-                }
-              }
-            },
-            "officialSealOrStamp": {
-              "@id": "schema:image",
-              "@type": "@id"
-            }
-          }
-        },
-        "verificationDetails": {
-          "@id": "ex:verificationDetails",
-          "@type": "ex:VerificationDetails",
-          "@context": {
-            "certificateNumberOrID": "schema:serialNumber",
-            "qrCodeOrBarcode": {
-              "@id": "ex:qrCodeOrBarcode",
-              "@type": "@id"
-            },
-            "verificationURL": {
-              "@id": "schema:url",
-              "@type": "@id"
-            }
-          }
-        },
-        "additionalElements": {
-          "@id": "ex:additionalElements",
-          "@type": "ex:AdditionalElements",
-          "@context": {
-            "schoolMottoOrTagline": "ex:schoolMottoOrTagline",
-            "inspirationalQuotesOrMessages": "ex:inspirationalQuotesOrMessages",
-            "logosOfSponsorsOrPartners": {
-              "@id": "ex:logosOfSponsorsOrPartners",
-              "@container": "@set",
-              "@type": "@id"
-            },
-            "backgroundGraphicsOrWatermarks": "ex:backgroundGraphicsOrWatermarks"
-          }
-        }
-      }
-    },
-    "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
-    "SelfSignedCredential": {
-      "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential",
+      "@id": "http://example.com/credentialSubject",
       "@type": "@id"
     },
-    "JsonSchemaValidator2018": {
-      "@id": "https://w3id.org/security#JsonSchemaValidator2018",
+    "certificateTitle": {
+      "@id": "https://example.org/certificateTitle",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "organizationName": {
+      "@id": "https://schema.org/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "organizationLogoOrEmblem": {
+      "@id": "https://schema.org/logo",
       "@type": "@id"
+    },
+    "organizationAddress": {
+      "@id": "https://schema.org/address",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "phoneNumber": {
+      "@id": "https://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "email": {
+      "@id": "https://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "websiteURL": {
+      "@id": "https://schema.org/url",
+      "@type": "@id"
+    },
+    "affiliationInformation": {
+      "@id": "https://example.org/affiliationInformation",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "boardOfEducation": {
+      "@id": "https://example.org/boardOfEducation",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "accreditationDetails": {
+      "@id": "https://example.org/accreditationDetails",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fullName": {
+      "@id": "https://schema.org/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "classOrGrade": {
+      "@id": "https://example.org/classOrGrade",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "section": {
+      "@id": "https://example.org/section",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "rollNumberOrStudentID": {
+      "@id": "https://schema.org/identifier",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dateOfBirth": {
+      "@id": "https://schema.org/birthDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "studentPhotograph": {
+      "@id": "https://schema.org/image",
+      "@type": "@id"
+    },
+    "accomplishmentName": {
+      "@id": "https://example.org/accomplishmentName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "achievementDate": {
+      "@id": "https://example.org/achievementDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "descriptionOfAchievement": {
+      "@id": "https://schema.org/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "levelOfAccomplishment": {
+      "@id": "https://example.org/levelOfAccomplishment",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "positionOrRank": {
+      "@id": "https://example.org/positionOrRank",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "certificationStatement": {
+      "@id": "https://example.org/certificationStatement",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "purposeOfCertificate": {
+      "@id": "https://example.org/purposeOfCertificate",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dateOfIssue": {
+      "@id": "https://schema.org/dateIssued",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "placeOfIssue": {
+      "@id": "https://example.org/placeOfIssue",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "signatoryName": {
+      "@id": "https://schema.org/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "signatoryDesignation": {
+      "@id": "https://schema.org/jobTitle",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "signatorySignature": {
+      "@id": "https://schema.org/signature",
+      "@type": "@id"
+    },
+    "officialSealOrStamp": {
+      "@id": "https://schema.org/image",
+      "@type": "@id"
+    },
+    "verificationURL": {
+      "@id": "https://schema.org/url",
+      "@type": "@id"
+    },
+    "schoolMottoOrTagline": {
+      "@id": "https://example.org/schoolMottoOrTagline",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inspirationalQuotesOrMessages": {
+      "@id": "https://example.org/inspirationalQuotesOrMessages",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     }
   }
 }
