@@ -1,0 +1,29 @@
+{
+    "@context": {
+        "@protected": true,
+        "@version": 1.1,
+        "SelfSignedCredential": {
+            "@context": {
+                "@version": 1.1,
+                "id": "@id",
+                "type": "@type"
+            },
+            "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#SelfSignedCredential"
+        },
+        "WalletCredentials": {
+            "@context": {
+                "@protected": true,
+                "@version": 1.1,
+                "userID": "http://schema.org/userID",
+                "id": "@id",
+                "name": "http://schema.org/name",
+                "type": "@type"
+            },
+            "@id": "https://blockchaingateway.qikfox.com/getContext/TestWalletCredentialContext.jsonld#WalletCredentials"
+        },
+        "brand": "http://schema.org/brand",
+        "identifier": "http://schema.org/identifier",
+        "image": "http://schema.org/image",
+        "name": "http://schema.org/name"
+    }
+}
