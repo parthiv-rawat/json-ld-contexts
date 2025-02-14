@@ -35,8 +35,8 @@
                     "@id": "schema:about",
                     "@type": "schema:Person",
                     "@context": {
-                        "studentName": "schema:name",
-                        "studentID": "schema:identifier",
+                        "userName": "schema:name",
+                        "enrollmentID": "schema:identifier",
                         "dateOfBirth": {
                             "@id": "schema:birthDate",
                             "@type": "xsd:date"
@@ -53,7 +53,7 @@
                     "@id": "schema:provider",
                     "@type": "schema:Organization",
                     "@context": {
-                        "institutionName": "schema:name",
+                        "issuerName": "schema:name",
                         "institutionType": "schema:category",
                         "officialAddress": "schema:address",
                         "contactInformation": {
