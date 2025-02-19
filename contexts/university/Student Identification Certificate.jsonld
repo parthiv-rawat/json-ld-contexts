@@ -21,7 +21,7 @@
                 "enrollmentID": "https://example.org/examples#enrollmentID",
                 "userName": "https://example.org/examples#userName",
                 "id": "@id",
-                "schema": "https://blockchaingateway.qikfox.com/getSchema/TestHandleCredentialSchemaV1.jsonld",
+                "schema": "https://parthiv-rawat.github.io/W3C-Complaint-Schemas/schemas/university/Student%20Identification%20Certificate.json",
                 "type": "@type"
             },
             "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Student%20Identification%20Certificate.jsonld#HandleInformation"
