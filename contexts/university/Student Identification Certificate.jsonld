@@ -11,15 +11,7 @@
       "@type": "schema:Person",
       "userName": "schema:name",
       "enrollmentID": "schema:identifier",
-      "dateOfBirth": {
-        "@id": "schema:birthDate",
-        "@type": "xsd:date"
-      },
       "gender": "schema:gender",
-      "photo": {
-        "@id": "schema:image",
-        "@type": "@id"
-      }
     },
     "institutionDetails": {
       "@id": "schema:provider",
