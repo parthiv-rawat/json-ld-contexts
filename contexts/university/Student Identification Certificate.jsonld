@@ -45,8 +45,7 @@
     },
     "authorizedSignatory": {
       "@id": "schema:signatory",
-      "@type": "schema:Person",
-      "signatoryName": "schema:name"
+      "@type": "schema:Person"
     }
   }
 }
