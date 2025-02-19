@@ -1,39 +1,43 @@
 {
   "@context": {
-    "@protected": true,
-    "@version": 1.1,
-    "credentialName": "http://schema.org/name",
-    "description": "http://schema.org/description",
-    "identifier": "http://schema.org/identifier",
-    "name": "http://schema.org/name",
-    "studentDetails": {
-      "@id": "schema:about",
-      "@type": "schema:Person",
-      "userName": "schema:name",
-      "enrollmentID": "schema:identifier",
-      "gender": "schema:gender"
-    },
-    "institutionDetails": {
-      "@id": "schema:provider",
-      "@type": "schema:Organization",
-      "institutionType": "schema:category",
-      "officialAddress": "schema:address"
-    },
-    "phoneNumber": {
-      "@id": "schema:telephone",
-      "@type": "xsd:string"
-    },
-    "email": {
-      "@id": "schema:email",
-      "@type": "xsd:string"
-    },
-    "institutionLogo": {
-      "@id": "schema:logo",
-      "@type": "@id"
-    },
-    "authorizedSignatory": {
-      "@id": "schema:signatory",
-      "@type": "schema:Person"
-    }
+      "@protected": true,
+      "@version": 1.1,
+      "credentialName": "http://schema.org/name",
+      "description": "http://schema.org/description",
+      "identifier": "http://schema.org/identifier",
+      "name": "http://schema.org/name",
+      "credentialSubject": {
+        "@id": "schema:about",
+        "@type": "schema:Person"
+      },
+      "studentDetails": {
+        "@id": "http://schema.org/about",
+        "@type": "http://schema.org/Person",
+        "userName": "http://schema.org/name",
+        "enrollmentID": "http://schema.org/identifier",
+        "gender": "http://schema.org/gender"
+      },
+      "institutionDetails": {
+        "@id": "http://schema.org/provider",
+        "@type": "http://schema.org/Organization",
+        "institutionType": "http://schema.org/category",
+        "officialAddress": "http://schema.org/address"
+      },
+      "phoneNumber": {
+        "@id": "http://schema.org/telephone",
+        "@type": "xsd:string"
+      },
+      "email": {
+        "@id": "http://schema.org/email",
+        "@type": "xsd:string"
+      },
+      "institutionLogo": {
+        "@id": "http://schema.org/logo",
+        "@type": "@id"
+      },
+      "authorizedSignatory": {
+        "@id": "http://schema.org/signatory",
+        "@type": "http://schema.org/Person"
+      }
   }
 }
