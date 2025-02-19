@@ -50,10 +50,6 @@
       "signature": {
         "@id": "schema:signature",
         "@type": "@id"
-      },
-      "institutionSealOrStamp": {
-        "@id": "schema:image",
-        "@type": "@id"
       }
     }
   }
