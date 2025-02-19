@@ -1,7 +1,6 @@
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://parthiv-rawat.github.io/W3C-Complaint-Schemas/schemas/university/Student%20Identification%20Certificate.json",
     {
       "@protected": true,
       "@version": 1.1,
