@@ -48,7 +48,6 @@
       "@id": "schema:signatory",
       "@type": "schema:Person",
       "signatoryName": "schema:name",
-      "designation": "schema:jobTitle",
       "signature": {
         "@id": "schema:signature",
         "@type": "@id"
