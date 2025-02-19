@@ -11,7 +11,7 @@
       "@type": "schema:Person",
       "userName": "schema:name",
       "enrollmentID": "schema:identifier",
-      "gender": "schema:gender",
+      "gender": "schema:gender"
     },
     "institutionDetails": {
       "@id": "schema:provider",
