@@ -1,21 +1,23 @@
 {
-  "@context": {
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://parthiv-rawat.github.io/W3C-Complaint-Schemas/schemas/university/Student%20Identification%20Certificate.json",
+    {
       "@protected": true,
       "@version": 1.1,
-      "StudentIdentificationCertificate": {
-            "@context": {
-                  "@protected": true,
-                  "@version": 1.1,
-                  "description": "http://schema.org/description",
-                  "id": "@id",
-                  "identifier": "http://schema.org/identifier",
-                  "name": "http://schema.org/name",
-                  "type": "@type"
-             },
-             "@id": "https://parthiv-rawat.github.io/W3C-Complaint-Schemas/schemas/university/Student%20Identification%20Certificate.json"
+
+      "description": {
+        "@id": "http://schema.org/description",
+        "@type": "xsd:string"
       },
-    "description": "http://schema.org/description",
-    "identifier": "http://schema.org/identifier",
-    "name": "http://schema.org/name"
-  }
+      "identifier": {
+        "@id": "http://schema.org/identifier",
+        "@type": "xsd:string"
+      },
+      "name": {
+        "@id": "http://schema.org/name",
+        "@type": "xsd:string"
+      }
+    }
+  ]
 }
