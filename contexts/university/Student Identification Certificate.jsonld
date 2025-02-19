@@ -12,7 +12,7 @@
                 "name": "http://schema.org/name",
                 "type": "@type"
             },
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Student%20Identification%20Certificate.jsonld#HandleCredential"
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Student%20Identification%20Certificate.jsonld#StudentIdentificationCertificate"
         },
         "StudentIdentificationInformation": {
             "@context": {
@@ -24,7 +24,7 @@
                 "schema": "https://parthiv-rawat.github.io/W3C-Complaint-Schemas/schemas/university/Student%20Identification%20Certificate.json",
                 "type": "@type"
             },
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Student%20Identification%20Certificate.jsonld#HandleInformation"
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Student%20Identification%20Certificate.jsonld#StudentIdentificationInformation"
         },
         "description": "http://schema.org/description",
         "identifier": "http://schema.org/identifier",
