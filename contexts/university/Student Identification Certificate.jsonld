@@ -5,7 +5,7 @@
     "credentialName": "http://schema.org/name",
     "description": "http://schema.org/description",
     "identifier": "http://schema.org/identifier",
-    "name": "http://schema.org/name"
+    "name": "http://schema.org/name",
     "studentDetails": {
       "@id": "schema:about",
       "@type": "schema:Person",
