@@ -1,12 +1,34 @@
 {
-  "@context": {
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    {
       "@protected": true,
       "@version": 1.1,
-      "credentialName": "http://schema.org/name",
-      "description": "http://schema.org/description",
-      "identifier": "http://schema.org/identifier",
-      "enrollmentID": "http://schema.org/identifier",
-      "gender": "http://schema.org/gender",
-      "userName": "http://schema.org/name"
-  }
+
+      "credentialName": {
+        "@id": "http://schema.org/name",
+        "@type": "xsd:string"
+      },
+      "description": {
+        "@id": "http://schema.org/description",
+        "@type": "xsd:string"
+      },
+      "identifier": {
+        "@id": "http://schema.org/identifier",
+        "@type": "xsd:string"
+      },
+      "enrollmentID": {
+        "@id": "http://schema.org/identifier",
+        "@type": "xsd:string"
+      },
+      "gender": {
+        "@id": "http://schema.org/gender",
+        "@type": "xsd:string"
+      },
+      "userName": {
+        "@id": "http://schema.org/name",
+        "@type": "xsd:string"
+      }
+    }
+  ]
 }
