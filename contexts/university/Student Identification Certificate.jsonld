@@ -5,32 +5,8 @@
       "credentialName": "http://schema.org/name",
       "description": "http://schema.org/description",
       "identifier": "http://schema.org/identifier",
-      "studentDetails": {
-        "@id": "http://schema.org/Person",
-        "@type": "http://schema.org/Person",
-        "userName": "http://schema.org/name",
-        "enrollmentID": "http://schema.org/identifier",
-        "gender": "http://schema.org/gender"
-      },
-      "institutionDetails": {
-        "@id": "http://schema.org/Organization",
-        "@type": "http://schema.org/Organization"
-      },
-      "phoneNumber": {
-        "@id": "http://schema.org/telephone",
-        "@type": "xsd:string"
-      },
-      "email": {
-        "@id": "http://schema.org/email",
-        "@type": "xsd:string"
-      },
-      "institutionLogo": {
-        "@id": "http://schema.org/logo",
-        "@type": "@id"
-      },
-      "authorizedSignatory": {
-        "@id": "http://schema.org/Person",
-        "@type": "http://schema.org/Person"
-      }
+      "enrollmentID": "http://schema.org/identifier",
+      "gender": "http://schema.org/gender",
+      "userName": "http://schema.org/name"
   }
 }
