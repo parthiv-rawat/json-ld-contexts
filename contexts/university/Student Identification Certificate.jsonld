@@ -16,7 +16,6 @@
         "@type": "xsd:date"
       },
       "gender": "schema:gender",
-      "nationality": "schema:nationality",
       "photo": {
         "@id": "schema:image",
         "@type": "@id"
