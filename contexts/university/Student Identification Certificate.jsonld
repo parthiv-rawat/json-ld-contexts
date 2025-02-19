@@ -6,22 +6,20 @@
       "description": "http://schema.org/description",
       "identifier": "http://schema.org/identifier",
       "name": "http://schema.org/name",
+      "userName": "http://schema.org/name",
+      "enrollmentID": "http://schema.org/identifier",
+      "gender": "http://schema.org/gender",
       "credentialSubject": {
         "@id": "schema:about",
         "@type": "schema:Person"
       },
       "studentDetails": {
         "@id": "http://schema.org/about",
-        "@type": "http://schema.org/Person",
-        "userName": "http://schema.org/name",
-        "enrollmentID": "http://schema.org/identifier",
-        "gender": "http://schema.org/gender"
+        "@type": "http://schema.org/Person"
       },
       "institutionDetails": {
         "@id": "http://schema.org/provider",
-        "@type": "http://schema.org/Organization",
-        "institutionType": "http://schema.org/category",
-        "officialAddress": "http://schema.org/address"
+        "@type": "http://schema.org/Organization"
       },
       "phoneNumber": {
         "@id": "http://schema.org/telephone",
