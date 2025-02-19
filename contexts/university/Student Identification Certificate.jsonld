@@ -17,11 +17,7 @@
       "@id": "schema:provider",
       "@type": "schema:Organization",
       "institutionType": "schema:category",
-      "officialAddress": "schema:address",
-      "contactInformation": {
-        "@id": "schema:contactPoint",
-        "@type": "schema:ContactPoint"
-      }
+      "officialAddress": "schema:address"
     },
     "phoneNumber": {
       "@id": "schema:telephone",
