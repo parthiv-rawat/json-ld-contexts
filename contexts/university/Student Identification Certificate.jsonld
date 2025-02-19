@@ -24,7 +24,6 @@
     "institutionDetails": {
       "@id": "schema:provider",
       "@type": "schema:Organization",
-      "issuerName": "schema:name",
       "institutionType": "schema:category",
       "officialAddress": "schema:address",
       "contactInformation": {
