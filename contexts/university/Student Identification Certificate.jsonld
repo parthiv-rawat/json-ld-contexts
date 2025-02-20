@@ -1,33 +1,37 @@
 {
     "@context": {
-        "@protected": true,
         "@version": 1.1,
-        "StudentIdentificationCertificate": {
-            "@context": {
-                "@protected": true,
-                "@version": 1.1,
-                "description": "http://schema.org/description",
-                "id": "@id",
-                "identifier": "http://schema.org/identifier",
-                "name": "http://schema.org/name",
-                "type": "@type"
-            },
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Student%20Identification%20Certificate.jsonld#StudentIdentificationCertificate"
-        },
-        "StudentIdentificationInformation": {
-            "@context": {
-                "@protected": true,
-                "@version": 1.1,
-                "enrollmentID": "https://example.org/examples#enrollmentID",
-                "userName": "https://example.org/examples#userName",
-                "id": "@id",
-                "schema": "https://parthiv-rawat.github.io/W3C-Complaint-Schemas/schemas/university/Student%20Identification%20Certificate.json",
-                "type": "@type"
-            },
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Student%20Identification%20Certificate.jsonld#StudentIdentificationInformation"
-        },
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
         "description": "http://schema.org/description",
         "identifier": "http://schema.org/identifier",
-        "name": "http://schema.org/name"
+
+        "StudentIdentificationCertificate": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/StudentIdentificationCertificate",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "identifier": "http://schema.org/identifier",
+                "description": "http://schema.org/description"
+            }
+        },
+
+        "StudentIdentificationInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/StudentIdentificationInformation",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "enrollmentID": "https://example.org/vocab#enrollmentID",
+                "userName": "https://example.org/vocab#userName"
+            }
+        }
     }
 }
