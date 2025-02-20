@@ -22,7 +22,7 @@
             }
         },
 
-        "StudentIdentificationInformation": {
+        "StudentIdentificationCertificateInformation": {
             "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/StudentIdentificationInformation",
             "@context": {
                 "@version": 1.1,
