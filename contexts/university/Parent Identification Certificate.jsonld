@@ -25,7 +25,6 @@
                 "description": "http://schema.org/description"
             }
         },
-
         "ParentIdentificationCertificateInformation": {
             "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/ParentIdentificationInformation",
             "@context": {
@@ -40,18 +39,7 @@
                 "nationality": "https://example.org/vocab#nationality",
                 "photo": "http://schema.org/image",
                 "contactNumber": "https://example.org/vocab#contactNumber",
-                "email": "http://schema.org/email",
-                
-                "linkedStudent": {
-                    "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/LinkedStudentInformation",
-                    "@context": {
-                        "@version": 1.1,
-                        "@protected": true,
-                        "studentId": "@id",
-                        "studentName": "http://schema.org/name",
-                        "enrollmentID": "https://example.org/vocab#enrollmentID"
-                    }
-                }
+                "email": "http://schema.org/email"
             }
         }
     }
