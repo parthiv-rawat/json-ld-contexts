@@ -10,7 +10,6 @@
         "identifier": "http://schema.org/identifier",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-
         "ParentIdentificationCertificate": {
             "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/ParentIdentificationCertificate",
             "@context": {
