@@ -32,6 +32,7 @@
                 "id": "@id",
                 "type": "@type",
                 "competitionName": "https://example.org/vocab#competitionName",
+                "issuerName": "https://example.org/vocab#issuerName",
                 "userName": "https://example.org/vocab#userName"
             }
         }
