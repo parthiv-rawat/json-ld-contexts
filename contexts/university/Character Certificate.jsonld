@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
+        "description": "http://schema.org/description",
+        "identifier": "http://schema.org/identifier",
+        "design": "https://example.org/vocab#design",
+        "orientation": "https://example.org/vocab#orientation",
+        "CharacterCertificate": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificate",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "design": "https://example.org/vocab#design",
+                "orientation": "https://example.org/vocab#orientation",
+                "identifier": "http://schema.org/identifier",
+                "description": "http://schema.org/description"
+            }
+        },
+        "CharacterCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificateInformation",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "headOfDepartment": "https://example.org/vocab#headOfDepartment",
+                "completionYear": "https://example.org/vocab#completionYear",
+                "rollNumber": "https://example.org/vocab#rollNumber",
+                "session": "https://example.org/vocab#session",
+                "userName": "https://example.org/vocab#userName"
+            }
+        }
+    }
+}
