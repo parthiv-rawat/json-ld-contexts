@@ -1,46 +1,42 @@
 {
     "@context": {
-      "@version": 1.1,
-      "@protected": true,
-      "credentialName": {
-        "@id": "https://schema.org/name",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "issuer": {
-        "@id": "https://schema.org/issuer",
-        "@type": "@id"
-      },
-      "validFrom": {
-        "@id": "https://schema.org/validFrom",
-        "@type": "http://www.w3.org/2001/XMLSchema#date"
-      },
-      "credentialSubject": {
-        "@id": "http://example.com/credentialSubject"
-      },
-      "fatherName": {
-        "@id": "http://example.com/fatherName",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "motherName": {
-        "@id": "http://example.com/motherName",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "subjectId": {
-        "@id": "http://example.com/identifier",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "rollNumber": {
-        "@id": "http://example.com/rollNumber",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "courseName": {
-        "@id": "http://example.com/courseName",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      "userName": {
-        "@id": "http://example.com/userName",
-        "@type": "http://www.w3.org/2001/XMLSchema#string"
-      }
+        "@version": 1.1,
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
+        "description": "http://schema.org/description",
+        "identifier": "http://schema.org/identifier",
+        "design": "https://example.org/vocab#design",
+        "orientation": "https://example.org/vocab#orientation",
+        "MigrationCertificate": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "design": "https://example.org/vocab#design",
+                "orientation": "https://example.org/vocab#orientation",
+                "identifier": "http://schema.org/identifier",
+                "description": "http://schema.org/description"
+            }
+        },
+        "MigrationCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificateInformation",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "rollNumber": "https://example.org/vocab#rollNumber",
+                "courseName": "https://example.org/vocab#courseName",
+                "fatherName": "https://example.org/vocab#fatherName",
+                "motherName": "https://example.org/vocab#motherName",
+                "userName": "https://example.org/vocab#userName"
+            }
+        }
     }
-  }
-  
+}
