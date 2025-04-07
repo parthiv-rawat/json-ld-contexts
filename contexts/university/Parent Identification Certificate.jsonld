@@ -31,12 +31,8 @@
                 "@protected": true,
                 "id": "@id",
                 "type": "@type",
-                "parentName": "https://example.org/vocab#parentName",
+                "fullName": "https://example.org/vocab#parentName",
                 "relationship": "https://example.org/vocab#relationship",
-                "dateOfBirth": "http://schema.org/birthDate",
-                "gender": "https://example.org/vocab#gender",
-                "nationality": "https://example.org/vocab#nationality",
-                "photo": "http://schema.org/image",
                 "contactNumber": "https://example.org/vocab#contactNumber",
                 "email": "http://schema.org/email"
             }
