@@ -10,7 +10,7 @@
         "identifier": "http://schema.org/identifier",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-        "ModifiedParticipation": {
+        "ParticipationCertificate": {
             "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Participation",
             "@context": {
                 "@version": 1.1,
@@ -24,8 +24,8 @@
                 "description": "http://schema.org/description"
             }
         },
-        "ModifiedParticipationInformation": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/ParticipationInformation",
+        "ParticipationCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/ParticipationCertificateInformation",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
