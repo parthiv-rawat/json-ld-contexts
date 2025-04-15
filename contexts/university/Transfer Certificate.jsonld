@@ -1,0 +1,39 @@
+
+{
+    "@context": {
+        "@version": 1.1,
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
+        "description": "http://schema.org/description",
+        "design": "https://example.org/vocab#design",
+        "orientation": "https://example.org/vocab#orientation",
+        "TransferCertificate": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/TransferCertificate",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "design": "https://example.org/vocab#design",
+                "orientation": "https://example.org/vocab#orientation",
+                "description": "http://schema.org/description"
+            }
+        },
+        "TransferCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/TransferCertificateInformation",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "department": "https://example.org/vocab#department",
+                "session": "https://example.org/vocab#session",
+                "userName": "https://example.org/vocab#userName"
+            }
+        }
+    }
+}
