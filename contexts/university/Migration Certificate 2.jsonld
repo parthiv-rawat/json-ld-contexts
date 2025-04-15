@@ -1,0 +1,40 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
+        "description": "http://schema.org/description",
+        "design": "https://example.org/vocab#design",
+        "orientation": "https://example.org/vocab#orientation",
+        "MigrationCertificate2": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate2",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "design": "https://example.org/vocab#design",
+                "orientation": "https://example.org/vocab#orientation",
+                "description": "http://schema.org/description"
+            }
+        },
+        "MigrationCertificate2Information": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate2Information",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "rollNumber": "https://example.org/vocab#rollNumber",
+                "courseName": "https://example.org/vocab#courseName",
+                "fatherName": "https://example.org/vocab#fatherName",
+                "address": "https://example.org/vocab#address",
+                "userName": "https://example.org/vocab#userName"
+            }
+        }
+    }
+}
