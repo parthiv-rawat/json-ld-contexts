@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
+        "description": "http://schema.org/description",
+        "design": "https://example.org/vocab#design",
+        "orientation": "https://example.org/vocab#orientation",
+        "Accomplishment": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Accomplishment",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "design": "https://example.org/vocab#design",
+                "orientation": "https://example.org/vocab#orientation",
+                "description": "http://schema.org/description"
+            }
+        },
+        "AccomplishmentInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/AccomplishmentInformation",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "competitionName": "https://example.org/vocab#competitionName",
+                "userName": "https://example.org/vocab#userName"
+            }
+        }
+    }
+}
