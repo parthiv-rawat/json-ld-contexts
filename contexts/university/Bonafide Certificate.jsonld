@@ -1,96 +1,43 @@
 {
     "@context": {
         "@version": 1.1,
-        "credentialName": {
-            "@id": "https://schema.org/name",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
+        "description": "http://schema.org/description",
+        "identifier": "http://schema.org/identifier",
+        "design": "https://example.org/vocab#design",
+        "orientation": "https://example.org/vocab#orientation",
+        "BonafideCertificate": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/BonafideCertificate",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "design": "https://example.org/vocab#design",
+                "orientation": "https://example.org/vocab#orientation",
+                "identifier": "http://schema.org/identifier",
+                "description": "http://schema.org/description"
+            }
         },
-        "issuer": {
-            "@id": "https://schema.org/issuer",
-            "@type": "@id"
-        },
-        "validFrom": {
-            "@id": "https://schema.org/validFrom",
-            "@type": "http://www.w3.org/2001/XMLSchema#date"
-        },
-        "credentialSubject": {
-            "@id": "http://example.com/credentialSubject"
-        },
-        "institutionName": {
-            "@id": "https://schema.org/name",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "officialAddress": {
-            "@id": "https://schema.org/address",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "phoneNumber": {
-            "@id": "https://schema.org/telephone",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "email": {
-            "@id": "https://schema.org/email",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "officialLogoOrSeal": {
-            "@id": "https://schema.org/logo",
-            "@type": "@id"
-        },
-        "studentName": {
-            "@id": "https://schema.org/name",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "studentRollNumberOrID": {
-            "@id": "https://schema.org/identifier",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "dateOfBirth": {
-            "@id": "https://schema.org/birthDate",
-            "@type": "http://www.w3.org/2001/XMLSchema#date"
-        },
-        "admissionYearOrDateOfEnrollment": {
-            "@id": "https://example.org/admissionYearOrDateOfEnrollment",
-            "@type": "http://www.w3.org/2001/XMLSchema#date"
-        },
-        "programOrCourseEnrolled": {
-            "@id": "https://schema.org/educationalProgram",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "departmentOrFacultyName": {
-            "@id": "https://schema.org/department",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "durationOfCourse": {
-            "@id": "https://example.org/durationOfCourse",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "yearOfStudy": {
-            "@id": "https://example.org/yearOfStudy",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "enrollmentConfirmation": {
-            "@id": "https://example.org/enrollmentConfirmation",
-            "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-        },
-        "purposeOfIssuance": {
-            "@id": "https://example.org/purposeOfIssuance",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "signatoryName": {
-            "@id": "https://schema.org/name",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "designation": {
-            "@id": "https://schema.org/jobTitle",
-            "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "signature": {
-            "@id": "https://schema.org/signature",
-            "@type": "@id"
-        },
-        "institutionSealOrStamp": {
-            "@id": "https://schema.org/image",
-            "@type": "@id"
+        "BonafideCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/BonafideCertificateInformation",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "address": "https://example.org/vocab#address",
+                "purpose": "https://example.org/vocab#purpose",
+                "fatherName": "https://example.org/vocab#fatherName",
+                "motherName": "https://example.org/vocab#motherName",
+                "courseName": "https://example.org/vocab#courseName",
+                "userName": "https://example.org/vocab#userName"
+            }
         }
     }
 }
