@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "@version": 1.1,
+        "@protected": true,
+
+        "id": "@id",
+        "type": "@type",
+        "name": "http://schema.org/name",
+        "description": "http://schema.org/description",
+        "design": "https://example.org/vocab#design",
+        "orientation": "https://example.org/vocab#orientation",
+        "SportsCertificate2": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/SportsCertificate2",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "name": "http://schema.org/name",
+                "design": "https://example.org/vocab#design",
+                "orientation": "https://example.org/vocab#orientation",
+                "description": "http://schema.org/description"
+            }
+        },
+        "SportsCertificate2Information": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/SportsCertificate2Information",
+            "@context": {
+                "@version": 1.1,
+                "@protected": true,
+                "id": "@id",
+                "type": "@type",
+                "sportName": "https://example.org/vocab#sportName",
+                "userName": "https://example.org/vocab#userName"
+            }
+        }
+    }
+}
