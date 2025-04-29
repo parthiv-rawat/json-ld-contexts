@@ -31,7 +31,7 @@
                 "@protected": true,
                 "id": "@id",
                 "type": "@type",
-                "fullName": "https://example.org/vocab#parentName",
+                "userName": "https://example.org/vocab#userName",
                 "relationship": "https://example.org/vocab#relationship",
                 "contactNumber": "https://example.org/vocab#contactNumber",
                 "email": "http://schema.org/email"
