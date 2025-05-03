@@ -7,11 +7,10 @@
         "type": "@type",
         "name": "http://schema.org/name",
         "description": "http://schema.org/description",
-        "identifier": "http://schema.org/identifier",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-        "CharacterCertificate": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificate",
+        "CharacterCertificate2": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificate2",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
@@ -20,12 +19,11 @@
                 "name": "http://schema.org/name",
                 "design": "https://example.org/vocab#design",
                 "orientation": "https://example.org/vocab#orientation",
-                "identifier": "http://schema.org/identifier",
                 "description": "http://schema.org/description"
             }
         },
-        "CharacterCertificateInformation": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificateInformation",
+        "CharacterCertificate2Information": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificate2Information",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
@@ -35,6 +33,7 @@
                 "completionYear": "https://example.org/vocab#completionYear",
                 "rollNumber": "https://example.org/vocab#rollNumber",
                 "session": "https://example.org/vocab#session",
+                "fatherName": "https://example.org/vocab#fatherName",
                 "userName": "https://example.org/vocab#userName"
             }
         }
