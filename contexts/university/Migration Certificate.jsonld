@@ -7,11 +7,10 @@
         "type": "@type",
         "name": "http://schema.org/name",
         "description": "http://schema.org/description",
-        "identifier": "http://schema.org/identifier",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-        "MigrationCertificate": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate",
+        "MigrationCertificate2": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate2",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
@@ -20,12 +19,11 @@
                 "name": "http://schema.org/name",
                 "design": "https://example.org/vocab#design",
                 "orientation": "https://example.org/vocab#orientation",
-                "identifier": "http://schema.org/identifier",
                 "description": "http://schema.org/description"
             }
         },
-        "MigrationCertificateInformation": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificateInformation",
+        "MigrationCertificate2Information": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate2Information",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
@@ -34,7 +32,7 @@
                 "rollNumber": "https://example.org/vocab#rollNumber",
                 "courseName": "https://example.org/vocab#courseName",
                 "fatherName": "https://example.org/vocab#fatherName",
-                "motherName": "https://example.org/vocab#motherName",
+                "address": "https://example.org/vocab#address",
                 "userName": "https://example.org/vocab#userName"
             }
         }
