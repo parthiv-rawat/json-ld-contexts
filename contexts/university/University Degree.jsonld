@@ -9,8 +9,8 @@
           "identifier": "http://schema.org/identifier",
           "design": "https://example.org/vocab#design",
           "orientation": "https://example.org/vocab#orientation",
-          "UniversityDegree": {
-                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegree",
+          "UniversityDegree2": {
+                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegree2",
                 "@context": {
                         "@version": 1.1,
                         "@protected": true,
@@ -23,8 +23,8 @@
                         "description": "http://schema.org/description"
                 }
           },
-          "UniversityDegreeInformation": {
-                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegreeInformation",
+          "UniversityDegree2Information": {
+                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegree2Information",
                 "@context": {
                         "@version": 1.1,
                         "@protected": true,
