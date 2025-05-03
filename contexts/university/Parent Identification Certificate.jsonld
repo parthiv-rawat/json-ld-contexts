@@ -34,7 +34,8 @@
                 "userName": "https://example.org/vocab#userName",
                 "relationship": "https://example.org/vocab#relationship",
                 "contactNumber": "https://example.org/vocab#contactNumber",
-                "email": "http://schema.org/email"
+                "email": "http://schema.org/email",
+                "childName": "https://example.org/vocab#childName"
             }
         }
     }
