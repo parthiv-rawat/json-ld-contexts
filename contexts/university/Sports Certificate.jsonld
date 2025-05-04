@@ -10,7 +10,7 @@
         "description": "http://schema.org/description",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-        "SportsCertificate2": {
+        "SportsCertificate": {
             "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/SportsCertificate2",
             "@context": {
                 "@version": 1.1,
@@ -23,8 +23,8 @@
                 "description": "http://schema.org/description"
             }
         },
-        "SportsCertificate2Information": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/SportsCertificate2Information",
+        "SportsCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/SportsCertificateInformation",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
