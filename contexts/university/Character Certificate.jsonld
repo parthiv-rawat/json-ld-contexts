@@ -9,8 +9,8 @@
         "description": "http://schema.org/description",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-        "CharacterCertificate2": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificate2",
+        "CharacterCertificate": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificate",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
@@ -22,8 +22,8 @@
                 "description": "http://schema.org/description"
             }
         },
-        "CharacterCertificate2Information": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificate2Information",
+        "CharacterCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/CharacterCertificateInformation",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
