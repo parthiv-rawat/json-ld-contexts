@@ -9,8 +9,8 @@
           "identifier": "http://schema.org/identifier",
           "design": "https://example.org/vocab#design",
           "orientation": "https://example.org/vocab#orientation",
-          "UniversityDegree2": {
-                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegree2",
+          "UniversityDegree": {
+                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegree",
                 "@context": {
                         "@version": 1.1,
                         "@protected": true,
@@ -24,7 +24,7 @@
                 }
           },
           "UniversityDegreeInformation": {
-                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegree2Information",
+                "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegreeInformation",
                 "@context": {
                         "@version": 1.1,
                         "@protected": true,
