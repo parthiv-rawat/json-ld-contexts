@@ -23,7 +23,7 @@
                         "description": "http://schema.org/description"
                 }
           },
-          "UniversityDegree2Information": {
+          "UniversityDegreeInformation": {
                 "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/UniversityDegree2Information",
                 "@context": {
                         "@version": 1.1,
