@@ -9,8 +9,8 @@
         "description": "http://schema.org/description",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-        "AccomplishmentCertificate2": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/AccomplishmentCertificate2",
+        "Accomplishment": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/Accomplishment",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
@@ -22,8 +22,8 @@
                 "description": "http://schema.org/description"
             }
         },
-        "AccomplishmentCertificate2Information": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/AccomplishmentCertificate2Information",
+        "AccomplishmentInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/AccomplishmentInformation",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
