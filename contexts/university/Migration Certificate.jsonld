@@ -9,8 +9,8 @@
         "description": "http://schema.org/description",
         "design": "https://example.org/vocab#design",
         "orientation": "https://example.org/vocab#orientation",
-        "MigrationCertificate2": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate2",
+        "MigrationCertificate": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
@@ -22,8 +22,8 @@
                 "description": "http://schema.org/description"
             }
         },
-        "MigrationCertificate2Information": {
-            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificate2Information",
+        "MigrationCertificateInformation": {
+            "@id": "https://parthiv-rawat.github.io/json-ld-contexts/contexts/university/MigrationCertificateInformation",
             "@context": {
                 "@version": 1.1,
                 "@protected": true,
